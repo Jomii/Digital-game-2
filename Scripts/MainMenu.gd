@@ -13,9 +13,14 @@ func _ready():
 func Quit():
 	get_tree().quit()
 
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		Quit()
+
 func _on_Button2_pressed():
 	Quit()
 
 func _on_PlayButton_pressed():
 	get_tree().paused = false
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/LevelScene.tscn")

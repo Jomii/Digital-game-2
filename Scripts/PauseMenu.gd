@@ -1,6 +1,6 @@
 extends Panel
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		print("game is paused: ", get_tree().paused)
 		get_tree().paused = !get_tree().paused
@@ -20,4 +20,5 @@ func _on_ContinueButton_pressed():
 	hide()
 
 func _on_MainMenuButton_pressed():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")

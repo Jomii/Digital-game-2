@@ -1,84 +1,51 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Art/ButtonTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.239216, 1, 0.196078, 0.317647 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 1, 1, 1, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-shadow_color = Color( 0, 0, 0, 0.305882 )
-shadow_size = 2
-shadow_offset = Vector2( 1, 1 )
-
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, 490.78 )
+position = Vector2( 0, 800.419 )
 
-[node name="PauseMenu" type="Panel" parent="."]
-pause_mode = 2
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" parent="UI" instance=ExtResource( 1 )]
 visible = false
-margin_left = 414.0
-margin_top = 206.0
-margin_right = 573.0
-margin_bottom = 365.0
-custom_styles/panel = SubResource( 1 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
 
-[node name="Label" type="Label" parent="PauseMenu"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -36.5
-margin_top = 6.0
-margin_right = 36.5
-margin_bottom = 14.0
-text = "Paused"
-align = 1
+[node name="RightButton" type="Button" parent="UI"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 288.0
+margin_top = -105.0
+custom_fonts/font = ExtResource( 2 )
+text = "->"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ContinueButton" type="Button" parent="PauseMenu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -42.0
-margin_top = -10.0
-margin_right = 42.0
-margin_bottom = 10.0
-theme = ExtResource( 1 )
-text = "Continue"
+[node name="LeftButton" type="Button" parent="UI"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -105.0
+margin_right = -288.0
+custom_fonts/font = ExtResource( 2 )
+text = "<-"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="MainMenuButton" type="Button" parent="PauseMenu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -39.5
-margin_top = 28.1096
-margin_right = 39.5
-margin_bottom = 48.1096
-theme = ExtResource( 1 )
-text = "Main menu"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="PauseMenu/ContinueButton" to="PauseMenu" method="_on_ContinueButton_pressed"]
-[connection signal="pressed" from="PauseMenu/MainMenuButton" to="PauseMenu" method="_on_MainMenuButton_pressed"]
+[connection signal="button_down" from="UI/RightButton" to="Player" method="_on_RightButton_button_down"]
+[connection signal="button_up" from="UI/RightButton" to="Player" method="_on_RightButton_button_up"]
+[connection signal="button_down" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_down"]
+[connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_up"]

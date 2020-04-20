@@ -7,6 +7,8 @@ extends Area2D
 
 export var speed = 400
 var screen_size
+var right_action_pressed = false
+var left_action_pressed = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,7 +17,7 @@ func _ready():
 func _process(delta):
 	var velocity = Vector2()
 	
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") || right_action_pressed:
 		velocity.x += 1
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 1
@@ -26,6 +28,18 @@ func _process(delta):
 	# Restrict the position to be inside the screen
 	position.x = clamp(position.x, 0, screen_size.x)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func _on_RightButton_button_down():
+	right_action_pressed = true
+
+
+func _on_RightButton_button_up():
+	right_action_pressed = false
+
+
+func _on_LeftButton_button_down():
+	left_action_pressed = true
+
+
+func _on_LeftButton_button_up():
+	left_action_pressed = false
