@@ -4,7 +4,6 @@ extends Area2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-signal pause
 
 export var speed = 400
 var screen_size
@@ -15,9 +14,6 @@ func _ready():
 
 func _process(delta):
 	var velocity = Vector2()
-
-	if Input.is_action_just_pressed("ui_cancel"):
-		emit_signal("pause")
 	
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1

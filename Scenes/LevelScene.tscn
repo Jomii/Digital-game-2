@@ -80,6 +80,5 @@ text = "Main menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pause" from="Player" to="PauseMenu" method="_on_Player_pause"]
 [connection signal="pressed" from="PauseMenu/ContinueButton" to="PauseMenu" method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="PauseMenu" method="_on_MainMenuButton_pressed"]
