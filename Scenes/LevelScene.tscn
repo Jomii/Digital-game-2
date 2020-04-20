@@ -1,13 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Drop.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
+script = ExtResource( 4 )
+Drop = ExtResource( 5 )
+
+[node name="Drops" type="Node" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 800.419 )
+
+[node name="EnemySpawn" type="Line2D" parent="."]
+position = Vector2( 20, 60 )
+points = PoolVector2Array( 4, 0, 530, 0 )
+default_color = Color( 0.4, 0.501961, 1, 0 )
 
 [node name="UI" type="Control" parent="."]
 anchor_right = 1.0
@@ -17,15 +28,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PauseMenu" parent="UI" instance=ExtResource( 1 )]
-visible = false
-
 [node name="RightButton" type="Button" parent="UI"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 288.0
-margin_top = -105.0
+margin_top = -185.0
 custom_fonts/font = ExtResource( 2 )
 text = "->"
 flat = true
@@ -37,7 +45,7 @@ __meta__ = {
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -105.0
+margin_top = -185.0
 margin_right = -288.0
 custom_fonts/font = ExtResource( 2 )
 text = "<-"
@@ -45,7 +53,26 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PauseButton" type="Button" parent="UI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -111.0
+margin_bottom = 105.0
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" parent="UI" instance=ExtResource( 1 )]
+visible = false
+
+[node name="SpawnTimer" type="Timer" parent="."]
+autostart = true
+[connection signal="collect" from="Player" to="." method="_on_Player_collect"]
 [connection signal="button_down" from="UI/RightButton" to="Player" method="_on_RightButton_button_down"]
 [connection signal="button_up" from="UI/RightButton" to="Player" method="_on_RightButton_button_up"]
 [connection signal="button_down" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_down"]
 [connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_up"]
+[connection signal="button_down" from="UI/PauseButton" to="UI/PauseMenu" method="_on_PauseButton_button_down"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]

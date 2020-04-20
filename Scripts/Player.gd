@@ -1,11 +1,9 @@
 extends Area2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+signal collect(type)
 
 export var speed = 400
+
 var screen_size
 var right_action_pressed = false
 var left_action_pressed = false
@@ -19,7 +17,7 @@ func _process(delta):
 	
 	if Input.is_action_pressed("ui_right") || right_action_pressed:
 		velocity.x += 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") || left_action_pressed:
 		velocity.x -= 1
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -43,3 +41,8 @@ func _on_LeftButton_button_down():
 
 func _on_LeftButton_button_up():
 	left_action_pressed = false
+
+
+func _on_Player_body_entered(body):
+	emit_signal("collect", body.isBad)
+	body.queue_free()
