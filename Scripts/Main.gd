@@ -17,8 +17,7 @@ func start_game():
 	load_level()
 	
 func load_level():
-	var levelScene = load("res://Levels/Level_1.tscn")
-	level = levelScene.instance()
+	level = global.level
 	add_child(level)
 	print("loaded level ", level.name)
 	print("level drops ", level.drops)

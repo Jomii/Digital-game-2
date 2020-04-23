@@ -113,9 +113,9 @@ __meta__ = {
 
 [node name="CharacterSprite" type="TextureRect" parent="UI/TopPanel"]
 margin_left = -17.4584
-margin_top = -29.3301
+margin_top = -29.9604
 margin_right = 1006.54
-margin_bottom = 994.67
+margin_bottom = 994.04
 rect_scale = Vector2( 0.160092, 0.1502 )
 texture = ExtResource( 7 )
 flip_h = true

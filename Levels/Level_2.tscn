@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Art/Sprites/Materials/Bottles1.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=5]
+
+[node name="Level_2" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 2 )
+levelStartText = "Tiem to make another simple potion"
+characterText = "Drug trials? What’s the point? Most of the herbs have stopped fighting once they’re in the cauldron."
+collectGoal = [ {
+"amount": 3,
+"drop": ExtResource( 3 )
+}, {
+"amount": 4,
+"drop": ExtResource( 4 )
+}, {
+"amount": 2,
+"drop": ExtResource( 5 )
+}, {
+"amount": 0,
+"drop": null
+}, {
+"amount": 0,
+"drop": null
+} ]

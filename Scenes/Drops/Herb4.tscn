@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Drop.gd" type="Script" id=1]
-[ext_resource path="res://Art/Sprites/Materials/Herb2.png" type="Texture" id=2]
+[ext_resource path="res://Art/Sprites/Materials/Herb4.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.9296
@@ -13,5 +13,5 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.219962, 0.219962 )
+scale = Vector2( 0.204008, 0.204008 )
 texture = ExtResource( 2 )

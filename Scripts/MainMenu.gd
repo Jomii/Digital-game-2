@@ -23,4 +23,4 @@ func _on_Button2_pressed():
 func _on_PlayButton_pressed():
 	get_tree().paused = false
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scenes/LevelScene.tscn")
+	get_tree().change_scene("res://Scenes/LevelSelect.tscn")
