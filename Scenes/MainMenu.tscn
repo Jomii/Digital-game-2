@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 38
+use_filter = true
+font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
 pause_mode = 2
@@ -15,7 +26,7 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.239216, 1, 0.196078, 0.317647 )
+color = Color( 0.282353, 0.517647, 0.572549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,6 +59,31 @@ margin_bottom = 159.043
 custom_fonts/font = ExtResource( 2 )
 text = "Exit"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 1 )
+text = "Crafting Of Very Important Draughts"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 133.244
+margin_top = 203.568
+margin_right = 133.244
+margin_bottom = 358.568
+rect_rotation = -15.6459
+custom_fonts/font = SubResource( 2 )
+text = "19 Levels!"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

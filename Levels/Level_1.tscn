@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Art/Sprites/Materials/Bottles2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=4]
+
+[node name="Level_1" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 2 )
+levelStartText = "Welcome youngling, lets begin your training  by crafting a very simple potion: Spirits"
+characterText = "Know what a witch test is called? A hexam!"
+collectGoal = [ {
+"amount": 5,
+"drop": ExtResource( 4 )
+}, {
+"amount": 3,
+"drop": ExtResource( 3 )
+}, {
+"amount": 0,
+"drop": null
+}, {
+"amount": 0,
+"drop": null
+}, {
+"amount": 0,
+"drop": null
+} ]

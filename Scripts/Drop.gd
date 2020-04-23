@@ -1,6 +1,10 @@
 extends RigidBody2D
 
-var isBad = false
+class_name Drop
+
+export(int) var score = 1
+export(bool) var isBad = false
+
 var screen_size
 
 # Called when the node enters the scene tree for the first time.
