@@ -5,14 +5,19 @@ export (PackedScene) var Drop
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
+	start_game()
+	
+func start_game():
+	# TODO: Set player position to bottom of screen - padding (consisting of player sprite)
+	$Player.start($StartPosition.position)
 
 func _on_SpawnTimer_timeout():
-	var x1 = int(round($EnemySpawn.get_point_position(0).x)) # First point
-	var x2 = int(round($EnemySpawn.get_point_position($EnemySpawn.get_point_count() - 1).x)) # Last point
+	var x1 = int(round($DropSpawn.get_point_position(0).x)) # First point
+	var x2 = int(round($DropSpawn.get_point_position($DropSpawn.get_point_count() - 1).x)) # Last point
 	
 	var randomXFromSpawn = randi() % (x2 - x1 + 1) + x1
 	
-	var spawnPosition = Vector2(randomXFromSpawn, $EnemySpawn.transform.get_origin().y)
+	var spawnPosition = Vector2(randomXFromSpawn, $DropSpawn.transform.get_origin().y)
 	
 	var drop = Drop.instance()
 	

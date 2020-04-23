@@ -11,6 +11,9 @@ var left_action_pressed = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
+	
+func start(pos):
+	position = pos
 
 func _process(delta):
 	var velocity = Vector2()

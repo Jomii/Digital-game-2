@@ -7,6 +7,6 @@ var screen_size
 func _ready():
 	screen_size = get_viewport_rect().size
 
-func _process(delta):
+func _process(_delta):
 	if position.y > screen_size.y:
 		queue_free()
