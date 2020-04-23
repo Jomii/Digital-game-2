@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PotionBeat.ogg-06da44d3726ee75d67d8eb72ea485421.oggstr"
+
+[deps]
+
+source_file="res://Audio/PotionBeat.ogg"
+dest_files=[ "res://.import/PotionBeat.ogg-06da44d3726ee75d67d8eb72ea485421.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=7.38
