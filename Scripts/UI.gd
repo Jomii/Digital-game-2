@@ -16,19 +16,19 @@ func _on_Main_levelLoaded(characterText):
 		ingredientElements[i].visible = true
 		ingredientElements[i].find_node("DropIcon").texture = dropTexture
 		ingredientElements[i].find_node("Label").text = "0 / " + str(collectRequirement)
-#		ingredientElements[i].add_to_group("UI_" + dropObject.name)
 		ingredientElements[i].name = dropObject.name
 		
 		i += 1
 
-
+# Update Ingredient section of UI
 func _on_Main_dropCollected(collectedList):
 	var ingredientElements = $TopPanel/Ingredients.get_children()
 	for ingredient in collectedList:
 		for i in ingredientElements:
 			if i.name == ingredient.drop:
 				var text = i.find_node("Label").text
-				text[0] = str(ingredient.amount)
+				var split = text.split("/")
+				text = str(ingredient.amount) + " /" + split[1]
 				i.find_node("Label").text = text
 				
 			

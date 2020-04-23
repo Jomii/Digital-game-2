@@ -80,8 +80,7 @@ func _on_SpawnTimer_timeout():
 
 func _on_Player_collect(drop):
 	if drop.isBad:
-		# Restart game
-		start_game()
+		emit_signal("levelComplete", 0)
 	else:
 		for i in collected:
 			if i.drop == drop.name:
@@ -90,9 +89,26 @@ func _on_Player_collect(drop):
 	emit_signal("dropCollected", collected)
 	
 	if isLevelComplete():
-		print("we won bois")
 		var score = calculateScore()
 		emit_signal("levelComplete", score)
 		
 func calculateScore():
-	return 0
+	var total = 0
+	for i in level.drops:
+		var dropObject = i.drop.instance()
+		for drop in collected:
+			if drop.drop == dropObject.name:
+				var negativeScore = -dropObject.score * (drop.amount - i.amount)
+				print("negative score: ", negativeScore)
+				total += dropObject.score * i.amount
+				print("total before negative: ", total)
+				total += negativeScore
+				
+#		var overTarget = collected["drop"]
+	
+	print("calcing score ", total)
+	return total
+
+
+func _on_LevelEnd_restartLevel():
+	start_game()

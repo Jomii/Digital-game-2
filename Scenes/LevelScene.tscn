@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=8]
 [ext_resource path="res://Art/Sprites/Materials/Herb4.png" type="Texture" id=9]
 [ext_resource path="res://Art/Sprites/Materials/Herb6.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/LevelEnd.tscn" type="PackedScene" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.521569, 0.882353, 0.917647, 1 )
@@ -342,9 +343,13 @@ __meta__ = {
 [node name="PauseMenu" parent="UI" instance=ExtResource( 1 )]
 visible = false
 
+[node name="LevelEnd" parent="UI" instance=ExtResource( 11 )]
+visible = false
+
 [node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
 [connection signal="dropCollected" from="." to="UI" method="_on_Main_dropCollected"]
+[connection signal="levelComplete" from="." to="UI/LevelEnd" method="_on_Main_levelComplete"]
 [connection signal="levelLoaded" from="." to="UI" method="_on_Main_levelLoaded"]
 [connection signal="collect" from="Player" to="." method="_on_Player_collect"]
 [connection signal="button_down" from="UI/RightButton" to="Player" method="_on_RightButton_button_down"]
@@ -352,4 +357,5 @@ autostart = true
 [connection signal="button_down" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_down"]
 [connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_up"]
 [connection signal="button_down" from="UI/TopPanel/PauseButton" to="UI/PauseMenu" method="_on_PauseButton_button_down"]
+[connection signal="restartLevel" from="UI/LevelEnd" to="." method="_on_LevelEnd_restartLevel"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
