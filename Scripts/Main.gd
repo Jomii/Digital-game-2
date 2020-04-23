@@ -1,28 +1,62 @@
 extends Node
 
 signal levelLoaded(characterText)
+signal dropCollected(collectedList)
+signal levelComplete(score)
 
 export (PackedScene) var badDrop
+export(int, 1, 100) var badDropChance = 15
 
 var level
-export(int, 1, 100) var badDropChance = 15
+var collected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
 	start_game()
 	
 func start_game():
+	randomize()
 	$Player.start($StartPosition.position)
+	
+	# Remove all drops
+	for i in $Drops.get_children():
+		i.queue_free()
+		
 	load_level()
 	
 func load_level():
 	level = global.level
+	if level == null:
+		print("LevelScene entered without selecting level, defaulting to Level_1")
+		var lvlObject = load("res://Levels/Level_1.tscn")
+		level = lvlObject.instance()
+		
 	add_child(level)
-	print("loaded level ", level.name)
-	print("level drops ", level.drops)
-#	print("level DICt drops ", level.dictDrops)
+	
+	initialize_collected() # MUST BE AFTER ADDING CHILD!
+	
 	emit_signal("levelLoaded", level.characterText)
+
+func initialize_collected():
+	collected = level.drops.duplicate(true)
+	for item in collected:
+		item["amount"] = 0
+		
+		var drop = item["drop"].instance()
+		item["drop"] = drop.name
+		
+	print(collected)
+		
+
+func isLevelComplete():
+	for item in collected:
+		for item2 in level.drops:
+			var item2Name = item2.drop.instance().name
+			if item.drop == item2Name:
+				if item.amount < item2.amount:
+					return false
+					
+	return true
 
 func _on_SpawnTimer_timeout():
 	var x1 = int(round($DropSpawn.get_point_position(0).x)) # First point
@@ -40,15 +74,25 @@ func _on_SpawnTimer_timeout():
 	if randi() % 101 < badDropChance:
 		drop = badDrop.instance()
 	
-	
-#	var drop = Drop.instance()
-	
 	$Drops.add_child(drop)
 	
 	drop.position = spawnPosition
 
-func _on_Player_collect(type):
-	# type = isDropBad
-	if type:
-# warning-ignore:return_value_discarded
-		get_tree().reload_current_scene()
+func _on_Player_collect(drop):
+	if drop.isBad:
+		# Restart game
+		start_game()
+	else:
+		for i in collected:
+			if i.drop == drop.name:
+				i["amount"] += 1
+	
+	emit_signal("dropCollected", collected)
+	
+	if isLevelComplete():
+		print("we won bois")
+		var score = calculateScore()
+		emit_signal("levelComplete", score)
+		
+func calculateScore():
+	return 0

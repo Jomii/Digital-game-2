@@ -4,3 +4,4 @@
 
 [node name="LevelName" type="Node"]
 script = ExtResource( 1 )
+characterText = "Max 125 merkkiä"

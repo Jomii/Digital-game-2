@@ -1,6 +1,6 @@
 extends Area2D
 
-signal collect(type)
+signal collect(drop)
 
 export var speed = 400
 
@@ -47,5 +47,11 @@ func _on_LeftButton_button_up():
 
 
 func _on_Player_body_entered(body):
-	emit_signal("collect", body.isBad)
+	var dropName = body.name
+	# Remove possible duplicate markers from name eg. Herb1(2) -> Herb1
+	dropName = dropName.trim_prefix("@")
+	dropName = dropName.split("@", true, 1)
+	
+	var drop = {"name": dropName[0], "isBad": body.isBad}
+	emit_signal("collect", drop)
 	body.queue_free()

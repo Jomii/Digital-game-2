@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.9296
 
-[node name="Drop" type="RigidBody2D"]
+[node name="Spider" type="RigidBody2D"]
 script = ExtResource( 1 )
 isBad = true
 

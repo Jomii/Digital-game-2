@@ -1,15 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/LevelSelect.gd" type="Script" id=3]
+[ext_resource path="res://Art/Sprites/Materials/Bottles1.png" type="Texture" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 32
 use_filter = true
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 24
 use_filter = true
 font_data = ExtResource( 2 )
@@ -77,7 +78,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -134.0
 margin_right = -362.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Return"
 flat = true
 __meta__ = {
@@ -101,7 +102,7 @@ margin_left = 26.0
 margin_top = 97.0
 margin_right = -27.0
 margin_bottom = 350.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Level description"
 align = 1
 valign = 1
@@ -119,6 +120,7 @@ margin_left = -147.0
 margin_top = -162.0
 margin_right = 146.0
 margin_bottom = 163.0
+texture = ExtResource( 4 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

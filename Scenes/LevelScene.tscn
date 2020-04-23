@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
@@ -34,6 +34,13 @@ use_filter = true
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 28
+outline_size = 1
+outline_color = Color( 0, 0.027451, 0.415686, 0.623529 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 20
 use_filter = true
 font_data = ExtResource( 6 )
@@ -138,7 +145,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="UI/TopPanel"]
+[node name="CharacterText" type="Label" parent="UI/TopPanel"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -168.0
@@ -154,23 +161,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="GridContainer" parent="UI/TopPanel"]
-anchor_top = 0.745
+[node name="CollectText" type="Label" parent="UI/TopPanel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -41.0
+margin_right = 144.0
+custom_fonts/font = SubResource( 5 )
+text = "Collect:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ingredients" type="GridContainer" parent="UI/TopPanel"]
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 0.0749893
+margin_left = -450.0
+margin_top = -41.0
 columns = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Control" parent="UI/TopPanel/HBoxContainer"]
-margin_right = 112.0
-margin_bottom = 42.0
+[node name="Control" type="Control" parent="UI/TopPanel/Ingredients"]
+visible = false
+margin_right = 86.0
+margin_bottom = 41.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="UI/TopPanel/HBoxContainer/Control"]
+[node name="DropIcon" type="TextureRect" parent="UI/TopPanel/Ingredients/Control"]
 anchor_bottom = 1.0
 margin_right = 38.0
 margin_bottom = -3.8147e-06
@@ -180,14 +203,14 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Label" type="Label" parent="UI/TopPanel/HBoxContainer/Control"]
+[node name="Label" type="Label" parent="UI/TopPanel/Ingredients/Control"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -77.0
+margin_left = -54.0
 margin_right = -7.62939e-06
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "5 / 5"
 align = 1
 valign = 1
@@ -195,14 +218,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control2" type="Control" parent="UI/TopPanel/HBoxContainer"]
-margin_left = 116.0
-margin_right = 228.0
-margin_bottom = 42.0
+[node name="Control2" type="Control" parent="UI/TopPanel/Ingredients"]
+visible = false
+margin_right = 86.0
+margin_bottom = 41.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="UI/TopPanel/HBoxContainer/Control2"]
+[node name="DropIcon" type="TextureRect" parent="UI/TopPanel/Ingredients/Control2"]
 anchor_bottom = 1.0
 margin_right = 38.0
 margin_bottom = -3.8147e-06
@@ -212,14 +235,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Label" type="Label" parent="UI/TopPanel/HBoxContainer/Control2"]
+[node name="Label" type="Label" parent="UI/TopPanel/Ingredients/Control2"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -77.0
-margin_right = -7.62939e-06
+margin_left = -46.0
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "5 / 5"
 align = 1
 valign = 1
@@ -227,14 +249,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control3" type="Control" parent="UI/TopPanel/HBoxContainer"]
-margin_left = 232.0
-margin_right = 344.0
-margin_bottom = 42.0
+[node name="Control3" type="Control" parent="UI/TopPanel/Ingredients"]
+visible = false
+margin_right = 86.0
+margin_bottom = 41.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="UI/TopPanel/HBoxContainer/Control3"]
+[node name="DropIcon" type="TextureRect" parent="UI/TopPanel/Ingredients/Control3"]
 anchor_bottom = 1.0
 margin_right = 38.0
 margin_bottom = -3.8147e-06
@@ -243,14 +265,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Label" type="Label" parent="UI/TopPanel/HBoxContainer/Control3"]
+[node name="Label" type="Label" parent="UI/TopPanel/Ingredients/Control3"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -77.0
-margin_right = -7.62939e-06
+margin_left = -54.0
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "5 / 5"
 align = 1
 valign = 1
@@ -258,14 +279,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control4" type="Control" parent="UI/TopPanel/HBoxContainer"]
-margin_left = 348.0
-margin_right = 460.0
-margin_bottom = 42.0
+[node name="Control4" type="Control" parent="UI/TopPanel/Ingredients"]
+visible = false
+margin_right = 86.0
+margin_bottom = 41.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="UI/TopPanel/HBoxContainer/Control4"]
+[node name="DropIcon" type="TextureRect" parent="UI/TopPanel/Ingredients/Control4"]
 anchor_bottom = 1.0
 margin_right = 38.0
 margin_bottom = -3.8147e-06
@@ -274,14 +295,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Label" type="Label" parent="UI/TopPanel/HBoxContainer/Control4"]
+[node name="Label" type="Label" parent="UI/TopPanel/Ingredients/Control4"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -77.0
-margin_right = -7.62939e-06
+margin_left = -54.0
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "5 / 5"
 align = 1
 valign = 1
@@ -289,14 +309,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control5" type="Control" parent="UI/TopPanel/HBoxContainer"]
-margin_left = 464.0
-margin_right = 576.0
-margin_bottom = 42.0
+[node name="Control5" type="Control" parent="UI/TopPanel/Ingredients"]
+visible = false
+margin_right = 86.0
+margin_bottom = 41.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="UI/TopPanel/HBoxContainer/Control5"]
+[node name="DropIcon" type="TextureRect" parent="UI/TopPanel/Ingredients/Control5"]
 anchor_bottom = 1.0
 margin_right = 38.0
 margin_bottom = -3.8147e-06
@@ -305,14 +325,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Label" type="Label" parent="UI/TopPanel/HBoxContainer/Control5"]
+[node name="Label" type="Label" parent="UI/TopPanel/Ingredients/Control5"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -77.0
-margin_right = -7.62939e-06
+margin_left = -54.0
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "5 / 5"
 align = 1
 valign = 1
@@ -325,6 +344,7 @@ visible = false
 
 [node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
+[connection signal="dropCollected" from="." to="UI" method="_on_Main_dropCollected"]
 [connection signal="levelLoaded" from="." to="UI" method="_on_Main_levelLoaded"]
 [connection signal="collect" from="Player" to="." method="_on_Player_collect"]
 [connection signal="button_down" from="UI/RightButton" to="Player" method="_on_RightButton_button_down"]
