@@ -31,7 +31,8 @@ func load_level():
 		var lvlObject = load("res://Levels/Level_1.tscn")
 		level = lvlObject.instance()
 		
-	add_child(level)
+	if !level.get_parent():
+		add_child(level)
 	
 	initialize_collected() # MUST BE AFTER ADDING CHILD!
 	
@@ -98,15 +99,13 @@ func calculateScore():
 		var dropObject = i.drop.instance()
 		for drop in collected:
 			if drop.drop == dropObject.name:
+				# Remove points based on how many drops were collected over 
+				# the goal amount
 				var negativeScore = -dropObject.score * (drop.amount - i.amount)
-				print("negative score: ", negativeScore)
 				total += dropObject.score * i.amount
-				print("total before negative: ", total)
 				total += negativeScore
 				
-#		var overTarget = collected["drop"]
-	
-	print("calcing score ", total)
+
 	return total
 
 
