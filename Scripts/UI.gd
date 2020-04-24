@@ -4,7 +4,7 @@ extends CanvasLayer
 func _on_Main_levelLoaded(characterText):
 #	print("signal received with msg ", characterText)
 	$TopPanel/CharacterText.text = characterText
-	var ingredientElements = $TopPanel/Ingredients.get_children()
+	var ingredientElements = $TopPanel/CollectPanel/Ingredients.get_children()
 	print("testing level drops from UI", global.level.drops)
 	
 	var i = 0
@@ -22,7 +22,7 @@ func _on_Main_levelLoaded(characterText):
 
 # Update Ingredient section of UI
 func _on_Main_dropCollected(collectedList):
-	var ingredientElements = $TopPanel/Ingredients.get_children()
+	var ingredientElements = $TopPanel/CollectPanel/Ingredients.get_children()
 	for ingredient in collectedList:
 		for i in ingredientElements:
 			if i.name == ingredient.drop:
