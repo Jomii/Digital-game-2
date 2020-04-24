@@ -4,9 +4,15 @@ const levels_dir = "res://Levels"
 var level
 var levels = []
 var selectedLevelIndex = 0
+var saveData
 
 func _ready():
 	# TODO: pre set level to loaded game
+	# Load savefile to set selectedLevelIndex
+	load_save_file()
+	set_selectedLevelIndex()
+	
+	# Instance all levels from Levels folder
 	var files = list_files_in_directory(levels_dir)
 	for file in files:
 		if file != "LevelTemplate.tscn":
@@ -16,6 +22,18 @@ func _ready():
 	
 	update()
 	
+func load_save_file():
+	var saveFilePath = "user://savefile.save"
+	var saveFile = File.new()
+	var err = saveFile.open(saveFilePath, File.READ)
+	
+	if err == OK:
+		var fileText = saveFile.get_as_text()
+		var json_result = JSON.parse(fileText)
+		
+		if json_result.error == OK:
+			saveData = json_result.result
+	
 func update():
 	global.level = levels[selectedLevelIndex]
 	level = global.level
@@ -23,6 +41,40 @@ func update():
 	$LevelTitle.text = level.name.replace('_', ' ')
 	$Description.text = level.levelStartText
 	$Image.texture = level.levelStartIcon
+	setScore()
+	
+func setScore():
+	# Add level node to scene to run its _start() method to calc maxScore
+	add_child(level)
+	var maxScore = level.maxScore
+	remove_child(level)
+	
+	var savedLevel = saveData.get(level.name)
+	var score = 0
+	if savedLevel:
+		score = savedLevel["score"]
+	
+	if score == maxScore:
+		$Score.text = "***"
+	elif score >= maxScore / 2:
+		$Score.text = "**"
+	elif score >= maxScore / 3:
+		$Score.text = "*"
+	else:
+		$Score.text = ""
+
+func set_selectedLevelIndex():
+	if !saveData:
+		selectedLevelIndex = 0
+		return
+		
+	var keys = saveData.keys()
+	# Set level index to last completed level
+	selectedLevelIndex = keys.size() - 1
+	
+	# Stay at last level after completing it 
+	#if selectedLevelIndex >= levels.size():
+	#	selectedLevelIndex = levels.size() - 1
 	
 func list_files_in_directory(path):
 	var files = []

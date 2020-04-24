@@ -37,6 +37,43 @@ func load_level():
 	initialize_collected() # MUST BE AFTER ADDING CHILD!
 	
 	emit_signal("levelLoaded", level.characterText)
+	
+# Save score to save-file when completing level
+func save_game(levelScore):
+	var saveFilePath = "user://savefile.save"
+	var saveFile = File.new()
+	var err = saveFile.open(saveFilePath, File.READ_WRITE)
+	
+	if err == ERR_FILE_NOT_FOUND:
+		saveFile.open(saveFilePath, File.WRITE_READ)
+	elif err != OK:
+		print("error opening file, error code: ", err)
+		
+	var fileText = saveFile.get_as_text()
+	var saveData
+	var result
+	
+	if fileText:
+		result = JSON.parse(fileText)
+		# Could not parse file, most likely non valid JSON eg. empty String
+		if result.error == OK:
+			saveData = result.result
+	
+	# Empty savefile, init saveData to empty dict
+	if !saveData:
+		saveData = {}
+		
+	var levelKey = saveData.get(level.name)
+	
+	if !levelKey:
+		saveData[level.name] = { "score": levelScore }
+		print("saved ", level.name, " with score ", levelScore)
+	else:
+		if saveData[level.name]["score"] < levelScore:
+			saveData[level.name] =  { "score": levelScore }
+		
+	saveFile.store_line(to_json(saveData))
+	saveFile.close()
 
 func initialize_collected():
 	collected = level.drops.duplicate(true)
@@ -49,6 +86,7 @@ func initialize_collected():
 	print(collected)
 		
 
+# Check if collected amount >= goal amount for all drops
 func isLevelComplete():
 	for item in collected:
 		for item2 in level.drops:
@@ -91,6 +129,7 @@ func _on_Player_collect(drop):
 	
 	if isLevelComplete():
 		var score = calculateScore()
+		save_game(score)
 		emit_signal("levelComplete", score)
 		
 func calculateScore():

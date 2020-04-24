@@ -96,10 +96,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Score" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 88.0
+margin_bottom = 176.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Description" type="Label" parent="."]
 anchor_right = 1.0
 margin_left = 26.0
-margin_top = 97.0
+margin_top = 176.0
 margin_right = -27.0
 margin_bottom = 350.0
 custom_fonts/font = SubResource( 2 )

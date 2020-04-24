@@ -35,20 +35,6 @@ func _on_Main_levelComplete(score):
 		$Description.text = global.level.levelFailText
 		$Score.text = ""
 
-#	if score <= 0:
-#		$Description.text = global.level.levelFailText
-#		$Score.text = ""
-#	elif score <= maxScore / 3:
-#		$Description.text = global.level.levelOneStarText
-#		$Score.text = "*"
-#	elif score <= maxScore / 2:
-#		$Description.text = global.level.levelTwoStarText
-#		$Score.text = "**"
-#	elif score <= maxScore / 1:
-#		$Description.text = global.level.levelThreeStarText
-#		$Score.text = "***"
-
-
 func _on_RetryButton_pressed():
 	UnPause()
 	emit_signal("restartLevel")
