@@ -44,3 +44,9 @@ func _on_NextButton_pressed():
 	# warning-ignore:return_value_discarded
 	UnPause()
 	get_tree().change_scene("res://Scenes/LevelSelect.tscn")
+
+
+func _on_RightButton_pressed():
+	# warning-ignore:return_value_discarded
+	UnPause()
+	get_tree().change_scene("res://Scenes/LevelSelect.tscn")
