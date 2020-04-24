@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Art/ButtonTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Art/Sprites/Arrow_Right.png" type="Texture" id=3]
+
+[node name="LeftButton" type="Button"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 168.847
+margin_top = -28.9854
+margin_right = 301.847
+margin_bottom = 135.015
+rect_rotation = -180.0
+rect_scale = Vector2( 0.766869, 0.766869 )
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

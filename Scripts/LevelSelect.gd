@@ -118,3 +118,13 @@ func _on_ReturnButton_pressed():
 func _on_PlayButton_pressed():
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/LevelScene.tscn")
+
+
+func _on_RightButton2_pressed():
+	changeLevelIndex(1)
+	update()
+
+
+func _on_LeftButton2_pressed():
+	changeLevelIndex(-1)
+	update()
