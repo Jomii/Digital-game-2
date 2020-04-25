@@ -134,6 +134,11 @@ __meta__ = {
 }
 
 [node name="StarContainer" parent="Panel" instance=ExtResource( 6 )]
+margin_left = 57.7036
+margin_top = -62.492
+margin_right = 1232.7
+margin_bottom = 449.508
+rect_scale = Vector2( 0.205157, 0.205157 )
 [connection signal="pressed" from="Panel/NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="pressed" from="Panel/RightButton" to="." method="_on_RightButton_pressed"]
 [connection signal="pressed" from="Panel/RetryButton" to="." method="_on_RetryButton_pressed"]
