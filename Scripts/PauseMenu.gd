@@ -1,7 +1,11 @@
 extends Panel
 
 func _process(_delta):
-	if Input.is_action_just_pressed("ui_cancel"):
+	var isLevelEnd = false
+	if get_tree().paused && !visible:
+		isLevelEnd = true
+		
+	if Input.is_action_just_pressed("ui_cancel") && !isLevelEnd:
 		print("game is paused: ", get_tree().paused)
 		Pause()
 

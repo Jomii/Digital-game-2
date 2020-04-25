@@ -31,4 +31,17 @@ func _on_Main_dropCollected(collectedList):
 				text = str(ingredient.amount) + " /" + split[1]
 				i.find_node("Label").text = text
 				
+				var percentValue = 0
+				if ingredient.amount > 0:
+					percentValue = ingredient.amount / float(split[1]) * 100
+					
+				i.find_node("ProgressBar").value = percentValue
+					
+					
+				
 			
+
+func _on_LevelEnd_restartLevel():
+	var ingredientElements = $TopPanel/CollectPanel/Ingredients.get_children()
+	for node in ingredientElements:
+		node.find_node("ProgressBar").value = 0

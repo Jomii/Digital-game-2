@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Art/ButtonTheme.tres" type="Theme" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 54
@@ -40,9 +41,9 @@ margin_left = -148.0
 margin_top = -48.5
 margin_right = 148.0
 margin_bottom = 48.5
+theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 text = "Play"
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,12 +54,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -132.0
-margin_top = 64.043
+margin_top = 87.4255
 margin_right = 132.0
-margin_bottom = 159.043
+margin_bottom = 182.426
+theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 text = "Exit"
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

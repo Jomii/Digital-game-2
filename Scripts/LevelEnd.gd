@@ -20,20 +20,27 @@ func _on_Main_levelComplete(score):
 	Pause()
 	
 	var maxScore = global.level.maxScore
+	var visibleStars = 0
 	print("max score: ", maxScore, " you got: ", score)
 
 	if score == maxScore:
-		$Description.text = global.level.levelThreeStarText
-		$Score.text = "***"
+		$Panel/Description.text = global.level.levelThreeStarText
+		visibleStars = 3
 	elif score >= maxScore / 2:
-		$Description.text = global.level.levelTwoStarText
-		$Score.text = "**"
+		$Panel/Description.text = global.level.levelTwoStarText
+		visibleStars = 2
 	elif score >= maxScore / 3:
-		$Description.text = global.level.levelOneStarText
-		$Score.text = "*"
+		$Panel/Description.text = global.level.levelOneStarText
+		visibleStars = 1
 	else:
-		$Description.text = global.level.levelFailText
-		$Score.text = ""
+		$Panel/Description.text = global.level.levelFailText
+		
+	var starNodes = $Panel/StarContainer.get_children()
+	for i in range(starNodes.size()):
+		if i < visibleStars:
+			starNodes[i].visible = true
+		else:
+			starNodes[i].visible = false
 
 func _on_RetryButton_pressed():
 	UnPause()

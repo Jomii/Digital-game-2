@@ -26,8 +26,9 @@ func _process(delta):
 		velocity = velocity.normalized() * speed
 		
 	position += velocity * delta
+	var offset = 26
 	# Restrict the position to be inside the screen
-	position.x = clamp(position.x, 0, screen_size.x)
+	position.x = clamp(position.x, 0 + offset, screen_size.x - offset)
 
 
 func _on_RightButton_button_down():

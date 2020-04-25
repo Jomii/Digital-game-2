@@ -54,14 +54,24 @@ func setScore():
 	if savedLevel:
 		score = savedLevel["score"]
 	
+	var visibleStars = 0
+	
 	if score == maxScore:
-		$Score.text = "***"
+		visibleStars = 3
+#		$Score.text = "***"
 	elif score >= maxScore / 2:
-		$Score.text = "**"
+		visibleStars = 2
+#		$Score.text = "**"
 	elif score >= maxScore / 3:
-		$Score.text = "*"
-	else:
-		$Score.text = ""
+		visibleStars = 1
+#		$Score.text = "*"
+	
+	var starNodes = $StarContainer.get_children()
+	for i in range(starNodes.size()):
+		if i < visibleStars:
+			starNodes[i].visible = true
+		else:
+			starNodes[i].visible = false
 
 func set_selectedLevelIndex():
 	if !saveData:

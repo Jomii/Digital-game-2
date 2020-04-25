@@ -1,19 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Art/ButtonTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.282353, 0.517647, 0.572549, 1 )
+bg_color = Color( 0, 0, 0, 0.235294 )
 border_color = Color( 1, 1, 1, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
 shadow_color = Color( 0, 0, 0, 0.305882 )
 shadow_size = 2
 shadow_offset = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0.298039, 0.54902, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 46
+use_filter = true
+font_data = ExtResource( 4 )
 
 [node name="PauseMenu" type="Panel"]
 pause_mode = 2
@@ -23,16 +42,43 @@ custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -227.0
+margin_top = -344.0
+margin_right = 227.0
+margin_bottom = 458.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="Panel" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 47.0
+margin_right = -3.05176e-05
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -139.0
+margin_top = 56.2588
 margin_right = 139.0
-margin_bottom = 72.0
+margin_bottom = 132.259
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0.466667, 0.741176, 1 )
 text = "Paused"
 align = 1
 valign = 1
@@ -40,36 +86,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ContinueButton" type="Button" parent="."]
+[node name="ContinueButton" type="Button" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -148.5
-margin_top = -40.0
-margin_right = 148.5
-margin_bottom = 40.0
+margin_left = -148.0
+margin_top = -96.8637
+margin_right = 149.0
+margin_bottom = -6.86368
 theme = ExtResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 3 )
 text = "Continue"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MainMenuButton" type="Button" parent="."]
+[node name="MainMenuButton" type="Button" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -174.5
-margin_top = 79.0869
-margin_right = 174.5
-margin_bottom = 162.087
+margin_left = -147.0
+margin_top = 83.0
+margin_right = 148.0
+margin_bottom = 174.0
 theme = ExtResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Main menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
-[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="Panel/ContinueButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="Panel/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
