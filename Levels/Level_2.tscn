@@ -1,29 +1,31 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottles1.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=6]
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
-levelStartText = "Tiem to make another simple potion"
+levelStartText = "Now for something that's the slightest bit more challenging. Brew me the elixir of merciful wisdom. And no, you are not allowed to drink it to help with the next potion after this. "
 characterText = "Drug trials? What’s the point? Most of the herbs have stopped fighting once they’re in the cauldron."
+levelFailText = "Well that was absolutely awful. Better luck next time."
+levelOneStarText = "Well, I can't expect more from a newbie."
+levelTwoStarText = "Getting the hang of it, huh?"
+levelThreeStarText = "Congratulations! You are a natural!"
 collectGoal = [ {
-"amount": 3,
+"amount": 2,
+"drop": ExtResource( 6 )
+}, {
+"amount": 1,
 "drop": ExtResource( 3 )
 }, {
-"amount": 4,
+"amount": 2,
 "drop": ExtResource( 4 )
 }, {
-"amount": 2,
+"amount": 1,
 "drop": ExtResource( 5 )
-}, {
-"amount": 0,
-"drop": null
-}, {
-"amount": 0,
-"drop": null
 } ]
