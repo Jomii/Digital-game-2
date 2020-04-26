@@ -1,33 +1,33 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
-[ext_resource path="res://Art/Sprites/Materials/Bottles2.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Art/Sprites/Materials/Bottles3.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=7]
 
-[node name="Level_1" type="Node"]
+[node name="Level_4" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
-levelStartText = "Ah, my newest pupil! Let's start with the simplest of potions: the tonic of vitality. And mind the spiders! "
-characterText = "Know what a witch test is called? A hexam!"
+levelStartText = "Now, to something more dangerous. A shoddy potion of balance can ruin your entire week. "
+characterText = "A giant once asked to become my apprentice, but I sent him packing because he was so high all the time."
 levelFailText = "Well that was absolutely awful. Better luck next time."
-levelOneStarText = "Well, I can't expect more from a newbie."
-levelTwoStarText = "Getting the hang of it, huh?"
+levelOneStarText = "Suppose I can't expect more from a newbie."
+levelTwoStarText = "Getting the hang of it, huh? About time."
 levelThreeStarText = "Congratulations! You are a natural!"
 collectGoal = [ {
-"amount": 1,
-"drop": ExtResource( 3 )
+"amount": 2,
+"drop": ExtResource( 7 )
 }, {
 "amount": 1,
 "drop": ExtResource( 4 )
 }, {
-"amount": 1,
-"drop": ExtResource( 7 )
+"amount": 3,
+"drop": ExtResource( 3 )
 }, {
-"amount": 1,
+"amount": 3,
 "drop": ExtResource( 6 )
 } ]
 

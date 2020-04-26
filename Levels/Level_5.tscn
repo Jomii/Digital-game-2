@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Art/Sprites/Materials/Bottles4.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=7]
+
+[node name="Level_5" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 2 )
+levelStartText = "Ah, I remember this potion well... the flask of endless hours can save your hide in most time-sensitive situations. "
+characterText = "What’s the order every dwarf bartender hates hearing? A tall order!"
+levelFailText = "Awful. Absolutely abysmal. "
+levelOneStarText = "Suppose I can't expect more from a newbie."
+levelTwoStarText = "Getting the hang of it, huh? About time."
+levelThreeStarText = "Congratulations! We might just make an alchemist out of you yet. "
+collectGoal = [ {
+"amount": 2,
+"drop": ExtResource( 4 )
+}, {
+"amount": 2,
+"drop": ExtResource( 6 )
+}, {
+"amount": 1,
+"drop": ExtResource( 7 )
+}, {
+"amount": 3,
+"drop": ExtResource( 5 )
+}, {
+"amount": 3,
+"drop": ExtResource( 3 )
+} ]
