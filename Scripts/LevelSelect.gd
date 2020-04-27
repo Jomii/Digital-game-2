@@ -49,7 +49,10 @@ func setScore():
 	var maxScore = level.maxScore
 	remove_child(level)
 	
-	var savedLevel = saveData.get(level.name)
+	var savedLevel
+	if saveData:
+		savedLevel = saveData.get(level.name)
+		
 	var score = 0
 	if savedLevel:
 		score = savedLevel["score"]
