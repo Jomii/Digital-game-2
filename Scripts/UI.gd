@@ -5,7 +5,6 @@ func _on_Main_levelLoaded(characterText):
 #	print("signal received with msg ", characterText)
 	$TopPanel/CharacterText.text = characterText
 	var ingredientElements = $TopPanel/CollectPanel/Ingredients.get_children()
-	print("testing level drops from UI", global.level.drops)
 	
 	var i = 0
 	for drop in global.level.drops:

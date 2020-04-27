@@ -8,7 +8,6 @@ func _process(_delta):
 		isLevelEnd = true
 		
 	if Input.is_action_just_pressed("ui_cancel") && !isLevelEnd:
-		print("game is paused: ", get_tree().paused)
 		Pause()
 
 func Pause():

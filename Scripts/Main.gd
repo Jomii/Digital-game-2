@@ -83,8 +83,6 @@ func initialize_collected():
 		var drop = item["drop"].instance()
 		item["drop"] = drop.name
 		
-	print(collected)
-		
 
 # Check if collected amount >= goal amount for all drops
 func isLevelComplete():
