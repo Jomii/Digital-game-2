@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottles1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=7]
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 1 )
@@ -29,3 +30,9 @@ collectGoal = [ {
 "amount": 1,
 "drop": ExtResource( 5 )
 } ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 7 )
+volume_db = -20.194
+autoplay = true

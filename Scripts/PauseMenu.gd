@@ -1,5 +1,7 @@
 extends Panel
 
+signal onOptionsPressed
+
 func _process(_delta):
 	var isLevelEnd = false
 	if get_tree().paused && !visible:
@@ -27,3 +29,7 @@ func _on_MainMenuButton_pressed():
 
 func _on_PauseButton_button_down():
 	Pause()
+
+
+func _on_OptionsButton_pressed():
+	emit_signal("onOptionsPressed")

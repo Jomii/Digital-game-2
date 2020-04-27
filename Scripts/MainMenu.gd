@@ -18,3 +18,7 @@ func _on_PlayButton_pressed():
 	get_tree().paused = false
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/LevelSelect.tscn")
+
+
+func _on_OptionsButton_pressed():
+	$OptionMenu.show()

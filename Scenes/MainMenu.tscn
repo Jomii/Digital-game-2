@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Art/ButtonTheme.tres" type="Theme" id=4]
+[ext_resource path="res://Scenes/OptionMenu.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 54
@@ -38,12 +39,28 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -148.0
-margin_top = -48.5
+margin_top = -107.72
 margin_right = 148.0
-margin_bottom = 48.5
+margin_bottom = -10.7197
 theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -148.0
+margin_top = 3.58569
+margin_right = 148.0
+margin_bottom = 100.586
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,10 +70,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -132.0
-margin_top = 87.4255
-margin_right = 132.0
-margin_bottom = 182.426
+margin_left = -147.0
+margin_top = 117.147
+margin_right = 147.0
+margin_bottom = 212.147
 theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 text = "Exit"
@@ -88,5 +105,9 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="OptionMenu" parent="." instance=ExtResource( 5 )]
+visible = false
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_Button2_pressed"]

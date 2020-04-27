@@ -45,3 +45,7 @@ func _on_LevelEnd_restartLevel():
 	var ingredientElements = $TopPanel/CollectPanel/Ingredients.get_children()
 	for node in ingredientElements:
 		node.find_node("ProgressBar").value = 0
+
+
+func _on_PauseMenu_onOptionsPressed():
+	$OptionMenu.show()

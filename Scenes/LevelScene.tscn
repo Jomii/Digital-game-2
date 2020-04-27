@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI/LeftButton.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Art/IconButtonTheme.tres" type="Theme" id=10]
 [ext_resource path="res://Scenes/LevelEnd.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Art/Sprites/Pause_Button.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/OptionMenu.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/UI/RightButton.tscn" type="PackedScene" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -240,6 +241,9 @@ visible = false
 [node name="LevelEnd" parent="UI" instance=ExtResource( 11 )]
 visible = false
 
+[node name="OptionMenu" parent="UI" instance=ExtResource( 13 )]
+visible = false
+
 [node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
 [connection signal="dropCollected" from="." to="UI" method="_on_Main_dropCollected"]
@@ -251,6 +255,7 @@ autostart = true
 [connection signal="button_down" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_down"]
 [connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_up"]
 [connection signal="button_down" from="UI/TopPanel/PauseButton" to="UI/PauseMenu" method="_on_PauseButton_button_down"]
+[connection signal="onOptionsPressed" from="UI/PauseMenu" to="UI" method="_on_PauseMenu_onOptionsPressed"]
 [connection signal="restartLevel" from="UI/LevelEnd" to="UI" method="_on_LevelEnd_restartLevel"]
 [connection signal="restartLevel" from="UI/LevelEnd" to="." method="_on_LevelEnd_restartLevel"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
