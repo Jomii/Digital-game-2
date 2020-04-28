@@ -6,9 +6,14 @@ signal levelComplete(score)
 
 export (PackedScene) var badDrop
 export(int, 1, 100) var badDropChance = 15
+export var difficultGravityScale = 10
+export var difficultSpawnRate = 0.3
 
 var level
 var collected
+var difficultyFactor = 1
+var gravityScale = 1
+var spawnRate = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,6 +40,7 @@ func load_level():
 		add_child(level)
 	
 	initialize_collected() # MUST BE AFTER ADDING CHILD!
+	set_difficulty()
 	
 	emit_signal("levelLoaded", level.characterText)
 	
@@ -83,6 +89,17 @@ func initialize_collected():
 		var drop = item["drop"].instance()
 		item["drop"] = drop.name
 		
+	
+# Set difficulty based on level
+func set_difficulty():
+	var factor = float(level.name.split("_")[1])
+	factor = factor / global.levelCount
+	gravityScale = difficultGravityScale * factor
+	
+	spawnRate = 1 - (1 - difficultSpawnRate) * factor
+	$SpawnTimer.wait_time = spawnRate
+	
+	badDropChance += 10 * factor
 
 # Check if collected amount >= goal amount for all drops
 func isLevelComplete():
@@ -112,6 +129,8 @@ func _on_SpawnTimer_timeout():
 		drop = badDrop.instance()
 	
 	$Drops.add_child(drop)
+	
+	drop.gravity_scale = gravityScale
 	
 	drop.position = spawnPosition
 

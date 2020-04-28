@@ -20,6 +20,7 @@ func _ready():
 			var instancedLvl = lvl.instance()
 			levels.append(instancedLvl)
 	
+	global.levelCount = levels.size()
 	update()
 	
 func load_save_file():
