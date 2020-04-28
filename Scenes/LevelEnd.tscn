@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/LevelEnd.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
@@ -7,30 +7,35 @@
 [ext_resource path="res://Art/Sprites/ButtonRetry.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/UI/StarContainer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/IconButtonTheme.tres" type="Theme" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.235294 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0.298039, 0.54902, 1 )
 corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 1, 1, 1 )
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 40
 outline_size = 1
 outline_color = Color( 0.00784314, 0.466667, 0.741176, 1 )
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="StyleBoxLine" id=5]
+color = Color( 0, 0.298039, 0.54902, 1 )
+thickness = 7
+
+[sub_resource type="DynamicFont" id=6]
 size = 28
 outline_color = Color( 0.00784314, 0.466667, 0.741176, 1 )
 use_filter = true
@@ -55,7 +60,7 @@ margin_left = -227.0
 margin_top = -344.0
 margin_right = 227.0
 margin_bottom = 458.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,13 +69,26 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 47.0
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 3 )
+
+[node name="Hahmo" type="TextureRect" parent="Panel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -22.5817
+margin_top = -419.345
+margin_right = 377.418
+margin_bottom = -19.3447
+rect_scale = Vector2( 0.73914, 0.715013 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Panel"]
 anchor_right = 1.0
 margin_top = 47.0
 margin_bottom = 150.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.00784314, 0.466667, 0.741176, 1 )
 text = "Level complete"
 align = 1
@@ -116,16 +134,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="HSeparator" type="HSeparator" parent="Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -134.862
+margin_bottom = -130.862
+custom_styles/separator = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Description" type="Label" parent="Panel"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = 23.0
-margin_top = -148.0
-margin_right = -24.0
-margin_bottom = 121.0
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0.00784314, 0.466667, 0.741176, 1 )
+margin_left = 14.4058
+margin_top = -281.823
+margin_right = -32.5942
+margin_bottom = -12.8233
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 1
 autowrap = true
@@ -139,6 +168,15 @@ margin_top = -62.492
 margin_right = 1232.7
 margin_bottom = 449.508
 rect_scale = Vector2( 0.205157, 0.205157 )
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+margin_left = 23.0
+margin_top = 253.0
+margin_right = 63.0
+margin_bottom = 293.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Panel/NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="pressed" from="Panel/RightButton" to="." method="_on_RightButton_pressed"]
 [connection signal="pressed" from="Panel/RetryButton" to="." method="_on_RetryButton_pressed"]

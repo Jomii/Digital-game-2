@@ -95,10 +95,13 @@ margin_bottom = 197.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Crafting Of Very Important Draughts"
+text = "Crafting Of Very
+ Important Draughts"
 align = 1
 valign = 1
-autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label2" type="Label" parent="."]
 anchor_right = 1.0
