@@ -24,12 +24,12 @@ bg_color = Color( 1, 1, 1, 1 )
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 50
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 46
 use_filter = true
 font_data = ExtResource( 4 )
@@ -96,7 +96,7 @@ margin_top = -124.623
 margin_right = 149.0
 margin_bottom = -34.6229
 theme = ExtResource( 1 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Continue"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -112,7 +112,7 @@ margin_top = -11.7353
 margin_right = 149.0
 margin_bottom = 78.2647
 theme = ExtResource( 1 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -128,7 +128,7 @@ margin_top = 101.506
 margin_right = 148.0
 margin_bottom = 192.506
 theme = ExtResource( 1 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Main menu"
 __meta__ = {
 "_edit_use_anchors_": false
