@@ -1,15 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Art/Sprites/Materials/Surroundings/Sign 3.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Art/ButtonTheme.tres" type="Theme" id=4]
+[ext_resource path="res://Art/Sprites/Materials/Surroundings/Sign 5.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/OptionMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Art/ButtonSignTheme.tres" type="Theme" id=6]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 400, 200 )
 
 [sub_resource type="DynamicFont" id=1]
-size = 54
+size = 50
 use_filter = true
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 400, 200 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 38
@@ -42,8 +51,7 @@ margin_left = -148.0
 margin_top = -107.72
 margin_right = 148.0
 margin_bottom = -10.7197
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 2 )
+theme = ExtResource( 6 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -58,8 +66,7 @@ margin_left = -148.0
 margin_top = 3.58569
 margin_right = 148.0
 margin_bottom = 100.586
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 2 )
+theme = ExtResource( 6 )
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -74,8 +81,7 @@ margin_left = -147.0
 margin_top = 117.147
 margin_right = 147.0
 margin_bottom = 212.147
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 2 )
+theme = ExtResource( 6 )
 text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,8 +89,12 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
-margin_bottom = 155.0
+margin_top = -20.0
+margin_right = 3.0
+margin_bottom = 197.0
+custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Crafting Of Very Important Draughts"
 align = 1
 valign = 1
@@ -92,11 +102,12 @@ autowrap = true
 
 [node name="Label2" type="Label" parent="."]
 anchor_right = 1.0
-margin_left = 133.244
-margin_top = 203.568
-margin_right = 133.244
-margin_bottom = 358.568
-rect_rotation = -15.6459
+margin_left = 290.517
+margin_top = 162.473
+margin_right = -13.483
+margin_bottom = 271.473
+rect_rotation = -9.10963
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 2 )
 text = "19 Levels!"
 align = 1
