@@ -131,9 +131,9 @@ margin_right = 1006.54
 margin_bottom = 994.04
 rect_scale = Vector2( 0.160092, 0.1502 )
 texture = ExtResource( 7 )
+expand = true
 flip_h = true
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -262,6 +262,6 @@ autostart = true
 [connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_up"]
 [connection signal="button_down" from="UI/TopPanel/PauseButton" to="UI/PauseMenu" method="_on_PauseButton_button_down"]
 [connection signal="onOptionsPressed" from="UI/PauseMenu" to="UI" method="_on_PauseMenu_onOptionsPressed"]
-[connection signal="restartLevel" from="UI/LevelEnd" to="UI" method="_on_LevelEnd_restartLevel"]
 [connection signal="restartLevel" from="UI/LevelEnd" to="." method="_on_LevelEnd_restartLevel"]
+[connection signal="restartLevel" from="UI/LevelEnd" to="UI" method="_on_LevelEnd_restartLevel"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]

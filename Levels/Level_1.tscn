@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottles2.png" type="Texture" id=2]
@@ -7,16 +7,26 @@
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaNormaali.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSeriousPuhallus.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIlonenAjatteleva.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmäKii.png" type="Texture" id=12]
 
 [node name="Level_1" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
 levelStartText = "Ah, my newest pupil! Let's start with the simplest of potions: the tonic of vitality. And mind the spiders! "
 characterText = "Know what a witch test is called? A hexam!"
+characterIcon = ExtResource( 9 )
 levelFailText = "Well that was absolutely awful. Better luck next time."
+levelFailIcon = ExtResource( 10 )
 levelOneStarText = "Well, I can't expect more from a newbie."
+levelOneStarIcon = ExtResource( 8 )
 levelTwoStarText = "Getting the hang of it, huh?"
+levelTwoStarIcon = ExtResource( 11 )
 levelThreeStarText = "Congratulations! You are a natural!"
+levelThreeStarIcon = ExtResource( 12 )
 collectGoal = [ {
 "amount": 1,
 "drop": ExtResource( 3 )

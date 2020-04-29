@@ -3,10 +3,15 @@ extends Node
 export(Texture) var levelStartIcon
 export(String, MULTILINE) var levelStartText
 export(String, MULTILINE) var characterText
+export(Texture) var characterIcon
 export(String, MULTILINE) var levelFailText
+export(Texture) var levelFailIcon
 export(String, MULTILINE) var levelOneStarText
+export(Texture) var levelOneStarIcon
 export(String, MULTILINE) var levelTwoStarText
+export(Texture) var levelTwoStarIcon
 export(String, MULTILINE) var levelThreeStarText
+export(Texture) var levelThreeStarIcon
 export(Array) var collectGoal = [{"drop": null, "amount": 0},
  {"drop": null, "amount": 0}, {"drop": null, "amount": 0}, 
 {"drop": null, "amount": 0} ,{"drop": null, "amount": 0}]

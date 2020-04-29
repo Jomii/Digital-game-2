@@ -4,6 +4,9 @@ extends CanvasLayer
 func _on_Main_levelLoaded(characterText):
 #	print("signal received with msg ", characterText)
 	$TopPanel/CharacterText.text = characterText
+	$TopPanel/CharacterSprite.texture = global.level.characterIcon
+	 # Need to flip texture, node apparently doesnt save flipped state
+	$TopPanel/CharacterSprite.flip_h = !$TopPanel/CharacterSprite.flip_h
 	var ingredientElements = $TopPanel/CollectPanel/Ingredients.get_children()
 	
 	var i = 0

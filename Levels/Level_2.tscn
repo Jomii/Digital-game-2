@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottles1.png" type="Texture" id=2]
@@ -7,16 +7,25 @@
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaNormaali.png" type="Texture" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaVihainen.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIlonenAjatteleva.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmäKii.png" type="Texture" id=11]
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
 levelStartText = "Now for something that's the slightest bit more challenging. Brew me the elixir of merciful wisdom. And no, you are not allowed to drink it to help with the next potion after this. "
 characterText = "Drug trials? What’s the point? Most of the herbs have stopped fighting once they’re in the cauldron."
+characterIcon = ExtResource( 8 )
 levelFailText = "Well that was absolutely awful. Better luck next time."
+levelFailIcon = ExtResource( 9 )
 levelOneStarText = "Well, I can't expect more from a newbie."
+levelOneStarIcon = ExtResource( 9 )
 levelTwoStarText = "Getting the hang of it, huh?"
+levelTwoStarIcon = ExtResource( 10 )
 levelThreeStarText = "Congratulations! You are a natural!"
+levelThreeStarIcon = ExtResource( 11 )
 collectGoal = [ {
 "amount": 2,
 "drop": ExtResource( 6 )

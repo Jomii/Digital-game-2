@@ -22,18 +22,19 @@ func _on_Main_levelComplete(score):
 	var maxScore = global.level.maxScore
 	var visibleStars = 0
 	print("max score: ", maxScore, " you got: ", score)
+	$Panel/Label.text = "Level complete"
 
 	if score == maxScore:
-		$Panel/Description.text = global.level.levelThreeStarText
+		$Panel/Hahmo.texture = global.level.levelThreeStarIcon
 		visibleStars = 3
 	elif score >= maxScore / 2:
-		$Panel/Description.text = global.level.levelTwoStarText
+		$Panel/Hahmo.texture = global.level.levelTwoStarIcon
 		visibleStars = 2
 	elif score >= maxScore / 3:
-		$Panel/Description.text = global.level.levelOneStarText
+		$Panel/Hahmo.texture = global.level.levelOneStarIcon
 		visibleStars = 1
 	else:
-		$Panel/Description.text = global.level.levelFailText
+		$Panel/Hahmo.texture = global.level.levelFailIcon
 		$Panel/Label.text = "Level failed"
 		
 	var starNodes = $Panel/StarContainer.get_children()
