@@ -16,7 +16,7 @@ levelStartText = "Ah, I remember this potion well... the flask of endless hours 
 characterText = "What’s the order every dwarf bartender hates hearing? A tall order!"
 levelFailText = "Awful. Absolutely abysmal. "
 levelOneStarText = "Suppose I can't expect more from a newbie."
-levelTwoStarText = "Getting the hang of it, huh? About time."
+levelTwoStarText = "“Good enough” is not a medical term. "
 levelThreeStarText = "Congratulations! We might just make an alchemist out of you yet. "
 collectGoal = [ {
 "amount": 2,

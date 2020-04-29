@@ -12,11 +12,11 @@
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
 levelStartText = "Ah, my newest pupil! Let's start with the simplest of potions: the tonic of vitality. And mind the spiders! "
-characterText = "Know what a witch test is called? A hexam!"
+characterText = "If they call you a quack, tell them you were once bitten by a were-duck. "
 levelFailText = "Well that was absolutely awful. Better luck next time."
 levelOneStarText = "Well, I can't expect more from a newbie."
 levelTwoStarText = "Getting the hang of it, huh?"
-levelThreeStarText = "Congratulations! You are a natural!"
+levelThreeStarText = "Congratulations! You might not be a lost cause, after all. "
 collectGoal = [ {
 "amount": 1,
 "drop": ExtResource( 3 )
