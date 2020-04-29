@@ -39,6 +39,14 @@ func update():
 	global.level = levels[selectedLevelIndex]
 	level = global.level
 	
+	# Lock playbutton if previous level has not been completed
+	if !saveData && selectedLevelIndex == 0:
+		$PlayButton.disabled = false
+	elif saveData && selectedLevelIndex <= saveData.keys().size():
+		$PlayButton.disabled = false
+	else:
+		$PlayButton.disabled = true
+	
 	$LevelTitle.text = level.name.replace('_', ' ')
 	$Description.text = level.levelStartText
 	$Image.texture = level.levelStartIcon

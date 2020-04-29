@@ -170,6 +170,7 @@ margin_bottom = 449.508
 rect_scale = Vector2( 0.205157, 0.205157 )
 
 [node name="TextureRect2" type="TextureRect" parent="Panel"]
+visible = false
 margin_left = 23.0
 margin_top = 253.0
 margin_right = 63.0

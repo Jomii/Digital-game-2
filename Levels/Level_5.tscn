@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottles4.png" type="Texture" id=2]
@@ -8,16 +8,28 @@
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaTajuton.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen2.png" type="Texture" id=11]
 
 [node name="Level_5" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
 levelStartText = "Ah, I remember this potion well... the flask of endless hours can save your hide in most time-sensitive situations. "
 characterText = "What’s the order every dwarf bartender hates hearing? A tall order!"
+characterIcon = ExtResource( 11 )
 levelFailText = "Awful. Absolutely abysmal. "
+levelFailIcon = ExtResource( 10 )
 levelOneStarText = "Suppose I can't expect more from a newbie."
+<<<<<<< HEAD
 levelTwoStarText = "“Good enough” is not a medical term. "
+=======
+levelOneStarIcon = ExtResource( 10 )
+levelTwoStarText = "Getting the hang of it, huh? About time."
+levelTwoStarIcon = ExtResource( 9 )
+>>>>>>> 0301f18bb903aaf009ef70925133c08670fa7cb0
 levelThreeStarText = "Congratulations! We might just make an alchemist out of you yet. "
+levelThreeStarIcon = ExtResource( 9 )
 collectGoal = [ {
 "amount": 2,
 "drop": ExtResource( 4 )

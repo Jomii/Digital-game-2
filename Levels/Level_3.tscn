@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottle5.png" type="Texture" id=2]
@@ -7,16 +7,33 @@
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen.png" type="Texture" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaPuhallus.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen2.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIlkeänIloinen.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIlonenAjatteleva.png" type="Texture" id=12]
 
 [node name="Level_3" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
 levelStartText = "Your next task is the draught of lunacy. I suggest you avoid inhaling the fumes..."
 characterText = " The green potion is for health, the blue for mana, the black for recall. The pink potion? I’ll tell you when you're older."
+<<<<<<< HEAD
 levelFailText = "I’d gladly let you treat my mother-in-law on her deathbed. It’s a wicked thing to say, but that’s just how bad you are. "
 levelOneStarText = "If it’s any consolation, you did not fail my expectations. Try again."
 levelTwoStarText = "You’re getting there alright. Where exactly that is, we shall see."
 levelThreeStarText = "Now that’s what we call medicine! You’d get a medal, if only we had any."
+=======
+characterIcon = ExtResource( 10 )
+levelFailText = "Well that was absolutely awful. Better luck next time."
+levelFailIcon = ExtResource( 11 )
+levelOneStarText = "Well, I can't expect more from a newbie."
+levelOneStarIcon = ExtResource( 9 )
+levelTwoStarText = "Getting the hang of it, huh?"
+levelTwoStarIcon = ExtResource( 8 )
+levelThreeStarText = "Congratulations! You are a natural!"
+levelThreeStarIcon = ExtResource( 12 )
+>>>>>>> 0301f18bb903aaf009ef70925133c08670fa7cb0
 collectGoal = [ {
 "amount": 3,
 "drop": ExtResource( 6 )
