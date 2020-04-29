@@ -40,8 +40,9 @@ func update():
 	level = global.level
 	
 	# Lock playbutton if previous level has not been completed
-	print("savedata keys size: ", saveData.keys().size(), " selectedLevelIndex: ", selectedLevelIndex)
-	if saveData && selectedLevelIndex <= saveData.keys().size():
+	if !saveData && selectedLevelIndex == 0:
+		$PlayButton.disabled = false
+	elif saveData && selectedLevelIndex <= saveData.keys().size():
 		$PlayButton.disabled = false
 	else:
 		$PlayButton.disabled = true
