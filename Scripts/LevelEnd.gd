@@ -34,6 +34,7 @@ func _on_Main_levelComplete(score):
 		visibleStars = 1
 	else:
 		$Panel/Description.text = global.level.levelFailText
+		$Panel/Label.text = "Level failed"
 		
 	var starNodes = $Panel/StarContainer.get_children()
 	for i in range(starNodes.size()):
