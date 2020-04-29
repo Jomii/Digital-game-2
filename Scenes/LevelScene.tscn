@@ -262,6 +262,6 @@ autostart = true
 [connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_LeftButton_button_up"]
 [connection signal="button_down" from="UI/TopPanel/PauseButton" to="UI/PauseMenu" method="_on_PauseButton_button_down"]
 [connection signal="onOptionsPressed" from="UI/PauseMenu" to="UI" method="_on_PauseMenu_onOptionsPressed"]
-[connection signal="restartLevel" from="UI/LevelEnd" to="." method="_on_LevelEnd_restartLevel"]
 [connection signal="restartLevel" from="UI/LevelEnd" to="UI" method="_on_LevelEnd_restartLevel"]
+[connection signal="restartLevel" from="UI/LevelEnd" to="." method="_on_LevelEnd_restartLevel"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
