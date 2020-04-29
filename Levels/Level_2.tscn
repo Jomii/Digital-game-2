@@ -17,22 +17,15 @@ script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
 levelStartText = "Now for something that's the slightest bit more challenging. Brew me the elixir of merciful wisdom. And no, you are not allowed to drink it to help with the next potion after this. "
 characterText = "Drug trials? What’s the point? Most of the herbs have stopped fighting once they’re in the cauldron."
-<<<<<<< HEAD
-levelFailText = "There’s a herb for everything, except for malpractice. "
-levelOneStarText = "I guess it's my fault for expecting a good result from a newbie. "
-levelTwoStarText = "Getting the hang of it, huh? Don't let it get to your head. "
-levelThreeStarText = "Do you know what I say to you and my favourite stake both? Well done!"
-=======
 characterIcon = ExtResource( 8 )
-levelFailText = "Well that was absolutely awful. Better luck next time."
+levelFailText = "There’s a herb for everything, except for malpractice. "
 levelFailIcon = ExtResource( 9 )
-levelOneStarText = "Well, I can't expect more from a newbie."
+levelOneStarText = "I guess it's my fault for expecting a good result from a newbie. "
 levelOneStarIcon = ExtResource( 9 )
-levelTwoStarText = "Getting the hang of it, huh?"
+levelTwoStarText = "Getting the hang of it, huh? Don't let it get to your head. "
 levelTwoStarIcon = ExtResource( 10 )
-levelThreeStarText = "Congratulations! You are a natural!"
+levelThreeStarText = "Do you know what I say to you and my favourite stake both? Well done!"
 levelThreeStarIcon = ExtResource( 11 )
->>>>>>> 0301f18bb903aaf009ef70925133c08670fa7cb0
 collectGoal = [ {
 "amount": 2,
 "drop": ExtResource( 6 )

@@ -16,22 +16,15 @@ script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )
 levelStartText = "Now, to something more dangerous. A shoddy potion of balance can ruin your entire week. "
 characterText = "A giant once asked to become my apprentice, but I sent him packing because he was so high all the time."
-<<<<<<< HEAD
-levelFailText = "Well that was absolutely disastrous. "
-levelOneStarText = "Disappointed, but not surprised. "
-levelTwoStarText = "Still a ways to go, but at least you're moving. And in the right direction. "
-levelThreeStarText = "Well done. I'm so proud of myself for having trained you! "
-=======
 characterIcon = ExtResource( 8 )
-levelFailText = "Well that was absolutely awful. Better luck next time."
+levelFailText = "Well that was absolutely disastrous. "
 levelFailIcon = ExtResource( 9 )
-levelOneStarText = "Suppose I can't expect more from a newbie."
+levelOneStarText = "Disappointed, but not surprised. "
 levelOneStarIcon = ExtResource( 9 )
-levelTwoStarText = "Getting the hang of it, huh? About time."
+levelTwoStarText = "Still a ways to go, but at least you're moving. And in the right direction. "
 levelTwoStarIcon = ExtResource( 10 )
-levelThreeStarText = "Congratulations! You are a natural!"
+levelThreeStarText = "Well done. I'm so proud of myself for having trained you! "
 levelThreeStarIcon = ExtResource( 10 )
->>>>>>> 0301f18bb903aaf009ef70925133c08670fa7cb0
 collectGoal = [ {
 "amount": 2,
 "drop": ExtResource( 7 )

@@ -21,13 +21,9 @@ characterIcon = ExtResource( 11 )
 levelFailText = "Awful. Absolutely abysmal. "
 levelFailIcon = ExtResource( 10 )
 levelOneStarText = "Suppose I can't expect more from a newbie."
-<<<<<<< HEAD
-levelTwoStarText = "“Good enough” is not a medical term. "
-=======
 levelOneStarIcon = ExtResource( 10 )
-levelTwoStarText = "Getting the hang of it, huh? About time."
+levelTwoStarText = "“Good enough” is not a medical term. "
 levelTwoStarIcon = ExtResource( 9 )
->>>>>>> 0301f18bb903aaf009ef70925133c08670fa7cb0
 levelThreeStarText = "Congratulations! We might just make an alchemist out of you yet. "
 levelThreeStarIcon = ExtResource( 9 )
 collectGoal = [ {
