@@ -6,6 +6,12 @@ var levels = []
 var selectedLevelIndex = 0
 var saveData
 
+class LevelSorter:
+	static func sort_ascending(a, b):
+		if int(a.name.split("_")[1]) < int(b.name.split("_")[1]):
+			return true
+		return false
+
 func _ready():
 	# TODO: pre set level to loaded game
 	# Load savefile to set selectedLevelIndex
@@ -19,6 +25,9 @@ func _ready():
 			var lvl = load(levels_dir + "/" + file)
 			var instancedLvl = lvl.instance()
 			levels.append(instancedLvl)
+	
+		
+	levels.sort_custom(LevelSorter, "sort_ascending")
 	
 	global.levelCount = levels.size()
 	update()
