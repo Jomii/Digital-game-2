@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=6]
+[ext_resource path="res://Art/Sprites/Materials/Bottles2.png" type="Texture" id=7]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=8]
+
+[node name="Level_6" type="Node"]
+script = ExtResource( 6 )
+levelStartIcon = ExtResource( 7 )
+levelStartText = "The philter of severe caution requires exactly that: caution. Luckily your robes are flame retardant.. "
+characterText = "Don’t ask fire from a dragon, no matter how bad you need a smoke. "
+levelFailText = "Be glad that I don’t pay you anything, because I’d be claiming every cent back now."
+levelOneStarText = "I ought to make you sample these potions yourself. Maybe that would teach you. "
+levelTwoStarText = "I’ve seen worse, I’ve seen better, but never both at once like that. Impressive. "
+levelThreeStarText = "What’s your secret for being so good? Well, me of course. And you better not forget it."
+collectGoal = [ {
+"amount": 4,
+"drop": ExtResource( 4 )
+}, {
+"amount": 1,
+"drop": ExtResource( 1 )
+}, {
+"amount": 2,
+"drop": ExtResource( 3 )
+}, {
+"amount": 1,
+"drop": ExtResource( 5 )
+}, {
+"amount": 2,
+"drop": ExtResource( 2 )
+} ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -20.194
+autoplay = true

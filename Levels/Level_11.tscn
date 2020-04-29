@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Art/Sprites/Materials/Bottles2.png" type="Texture" id=7]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=8]
+
+[node name="Level_11" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 7 )
+levelStartText = "Now, the potion of undeserved fortune... tempted to try some? I'd tell you how foolish that would be, but by know you ought to know already. "
+characterText = "How do you weaponize a cow? With am-moo-nution! "
+levelFailText = "Don’t worry, maybe next time you’ll do even worse and can feel good about yourself then."
+levelOneStarText = "Barely adequate. As I expected. "
+levelTwoStarText = "If it’s any consolation, you did not fail my expectations."
+levelThreeStarText = "I’m so proud of myself for having trained you!"
+collectGoal = [ {
+"amount": 4,
+"drop": ExtResource( 4 )
+}, {
+"amount": 2,
+"drop": ExtResource( 3 )
+}, {
+"amount": 4,
+"drop": ExtResource( 5 )
+}, {
+"amount": 5,
+"drop": ExtResource( 6 )
+}, {
+"amount": 1,
+"drop": ExtResource( 2 )
+} ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -20.194
+autoplay = true
