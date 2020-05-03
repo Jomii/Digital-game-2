@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Sign 3.png" type="Texture" id=2]
@@ -7,6 +7,28 @@
 [ext_resource path="res://Scenes/OptionMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Art/ButtonSignTheme.tres" type="Theme" id=6]
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/stone_tile.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Instructions.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Art/ButtonSignStyle.tres" type="StyleBox" id=9]
+[ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=10]
+
+[sub_resource type="DynamicFont" id=5]
+size = 44
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=6]
+default_font = ExtResource( 10 )
+Button/colors/font_color = Color( 0.384314, 0.243137, 0.0980392, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 5 )
+Button/styles/disabled = null
+Button/styles/focus = ExtResource( 9 )
+Button/styles/hover = ExtResource( 9 )
+Button/styles/normal = ExtResource( 9 )
+Button/styles/pressed = ExtResource( 9 )
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
@@ -50,9 +72,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -148.0
-margin_top = -107.72
+margin_top = -125.301
 margin_right = 148.0
-margin_bottom = -10.7197
+margin_bottom = -28.3005
 theme = ExtResource( 6 )
 text = "Play"
 __meta__ = {
@@ -65,11 +87,26 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -148.0
-margin_top = 3.58569
+margin_top = 86.2156
 margin_right = 148.0
-margin_bottom = 100.586
+margin_bottom = 183.216
 theme = ExtResource( 6 )
 text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InstructionsButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -148.0
+margin_top = -20.6131
+margin_right = 152.0
+margin_bottom = 76.3869
+theme = SubResource( 6 )
+text = "Instructions"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,9 +117,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -147.0
-margin_top = 117.147
+margin_top = 199.777
 margin_right = 147.0
-margin_bottom = 212.147
+margin_bottom = 294.777
 theme = ExtResource( 6 )
 text = "Exit"
 __meta__ = {
@@ -124,6 +161,10 @@ __meta__ = {
 
 [node name="OptionMenu" parent="." instance=ExtResource( 5 )]
 visible = false
+
+[node name="InstructionsMenu" parent="." instance=ExtResource( 8 )]
+visible = false
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="InstructionsButton" to="." method="_on_InstructionsButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_Button2_pressed"]
