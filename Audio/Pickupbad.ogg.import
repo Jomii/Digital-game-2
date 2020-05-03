@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pickupbad.ogg-d25fd371ae597e49ddc4f2720215a77f.oggstr"
+
+[deps]
+
+source_file="res://Audio/Pickupbad.ogg"
+dest_files=[ "res://.import/Pickupbad.ogg-d25fd371ae597e49ddc4f2720215a77f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
