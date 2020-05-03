@@ -22,3 +22,7 @@ func _on_PlayButton_pressed():
 
 func _on_OptionsButton_pressed():
 	$OptionMenu.show()
+
+
+func _on_InstructionsButton_pressed():
+	$InstructionsMenu.show()
