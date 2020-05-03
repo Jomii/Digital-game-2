@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KasvokuvaItkevä2.png-918dc2fb03cb1e31b06de16876cfaba5.stex"
+path="res://.import/KasvokuvaItkeva2.png-82357837649a11214a05669db1c8188f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites/Materials/Faces/KasvokuvaItkevä2.png"
-dest_files=[ "res://.import/KasvokuvaItkevä2.png-918dc2fb03cb1e31b06de16876cfaba5.stex" ]
+source_file="res://Art/Sprites/Materials/Faces/KasvokuvaItkeva2.png"
+dest_files=[ "res://.import/KasvokuvaItkeva2.png-82357837649a11214a05669db1c8188f.stex" ]
 
 [params]
 

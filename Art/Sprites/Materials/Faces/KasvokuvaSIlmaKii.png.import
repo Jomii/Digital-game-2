@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KasvokuvaEpäilevä.png-19e735b38dfac2957fe88e7b9236872f.stex"
+path="res://.import/KasvokuvaSIlmaKii.png-f381dba0512ccdb21a44631fe05a21e8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites/Materials/Faces/KasvokuvaEpäilevä.png"
-dest_files=[ "res://.import/KasvokuvaEpäilevä.png-19e735b38dfac2957fe88e7b9236872f.stex" ]
+source_file="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png"
+dest_files=[ "res://.import/KasvokuvaSIlmaKii.png-f381dba0512ccdb21a44631fe05a21e8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KasvokuvaItkevä.png-132c573336c51f122b08c51503cf4a98.stex"
+path="res://.import/KasvokuvaIloinenIlkeaAjatus.png-a41566854ef6e39afbc0e7b091389873.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites/Materials/Faces/KasvokuvaItkevä.png"
-dest_files=[ "res://.import/KasvokuvaItkevä.png-132c573336c51f122b08c51503cf4a98.stex" ]
+source_file="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenIlkeaAjatus.png"
+dest_files=[ "res://.import/KasvokuvaIloinenIlkeaAjatus.png-a41566854ef6e39afbc0e7b091389873.stex" ]
 
 [params]
 

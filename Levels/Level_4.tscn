@@ -9,7 +9,8 @@
 [ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaNormaali.png" type="Texture" id=8]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSurullinen.png" type="Texture" id=9]
-[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmäKii.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=10]
+
 
 [node name="Level_4" type="Node"]
 script = ExtResource( 1 )
