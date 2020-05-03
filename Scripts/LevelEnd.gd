@@ -48,18 +48,25 @@ func _on_Main_levelComplete(score):
 		else:
 			starNodes[i].visible = false
 
+func playButtonSound():
+	$ButtonSound.stream.loop = false
+	$ButtonSound.play()
+
 func _on_RetryButton_pressed():
 	UnPause()
+	playButtonSound()
 	emit_signal("restartLevel")
 
 
 func _on_NextButton_pressed():
 	# warning-ignore:return_value_discarded
 	UnPause()
+	playButtonSound()
 	get_tree().change_scene("res://Scenes/LevelSelect.tscn")
 
 
 func _on_RightButton_pressed():
 	# warning-ignore:return_value_discarded
 	UnPause()
+	playButtonSound()
 	get_tree().change_scene("res://Scenes/LevelSelect.tscn")

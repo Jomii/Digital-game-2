@@ -131,31 +131,41 @@ func changeLevelIndex(value):
 	elif selectedLevelIndex >= levels.size():
 		selectedLevelIndex = levels.size() - 1
 
+func playButtonSound():
+	$ButtonSound.stream.loop = false
+	$ButtonSound.play()
+	
 func _on_RightButton_pressed():
+	playButtonSound()
 	changeLevelIndex(1)
 	update()
 
 
 func _on_LeftButton_pressed():
+	playButtonSound()
 	changeLevelIndex(-1)
 	update()
 
 
 func _on_ReturnButton_pressed():
+	playButtonSound()
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 
 func _on_PlayButton_pressed():
+	playButtonSound()
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/LevelScene.tscn")
 
 
 func _on_RightButton2_pressed():
+	playButtonSound()
 	changeLevelIndex(1)
 	update()
 
 
 func _on_LeftButton2_pressed():
+	playButtonSound()
 	changeLevelIndex(-1)
 	update()

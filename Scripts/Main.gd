@@ -8,6 +8,8 @@ export (PackedScene) var badDrop
 export(int, 1, 100) var badDropChance = 15
 export var difficultGravityScale = 10
 export var difficultSpawnRate = 0.3
+export (AudioStream) var pickupGood
+export (AudioStream) var pickupBad
 
 var level
 var collected
@@ -17,6 +19,12 @@ var spawnRate = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if pickupGood:
+		pickupGood.loop = false
+		
+	if pickupBad:
+		pickupBad.loop = false
+		
 	start_game()
 	
 func start_game():
@@ -136,12 +144,15 @@ func _on_SpawnTimer_timeout():
 
 func _on_Player_collect(drop):
 	if drop.isBad:
+		$CollectSound.stream = pickupBad
 		emit_signal("levelComplete", 0)
 	else:
+		$CollectSound.stream = pickupGood
 		for i in collected:
 			if i.drop == drop.name:
 				i["amount"] += 1
 	
+	$CollectSound.play()
 	emit_signal("dropCollected", collected)
 	
 	if isLevelComplete():
