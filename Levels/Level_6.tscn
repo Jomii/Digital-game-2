@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=2]
@@ -8,16 +8,26 @@
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=6]
 [ext_resource path="res://Art/Sprites/Materials/Bottles2.png" type="Texture" id=7]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaAjatus.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIlkeänIloinen.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenIlkeäAjatus.png" type="Texture" id=12]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaVihainen.png" type="Texture" id=13]
 
 [node name="Level_6" type="Node"]
 script = ExtResource( 6 )
 levelStartIcon = ExtResource( 7 )
 levelStartText = "The philter of severe caution requires exactly that: caution. Luckily your robes are flame retardant.. "
 characterText = "Don’t ask fire from a dragon, no matter how bad you need a smoke. "
+characterIcon = ExtResource( 9 )
 levelFailText = "Be glad that I don’t pay you anything, because I’d be claiming every cent back now."
+levelFailIcon = ExtResource( 13 )
 levelOneStarText = "I ought to make you sample these potions yourself. Maybe that would teach you. "
+levelOneStarIcon = ExtResource( 10 )
 levelTwoStarText = "I’ve seen worse, I’ve seen better, but never both at once like that. Impressive. "
+levelTwoStarIcon = ExtResource( 12 )
 levelThreeStarText = "What’s your secret for being so good? Well, me of course. And you better not forget it."
+levelThreeStarIcon = ExtResource( 11 )
 collectGoal = [ {
 "amount": 4,
 "drop": ExtResource( 4 )

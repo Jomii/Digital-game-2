@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=2]
@@ -8,16 +8,25 @@
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=6]
 [ext_resource path="res://Art/Sprites/Materials/Bottles4.png" type="Texture" id=7]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenIlkeäAjatus.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaHikoilevaPuuskivaNolo.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaItkevä.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaPuhallus.png" type="Texture" id=12]
 
 [node name="Level_9" type="Node"]
 script = ExtResource( 6 )
 levelStartIcon = ExtResource( 7 )
 levelStartText = "Did you know you can use the flask of blinding light as fireworks? It will, of course, ruin your eyes permanently. "
 characterText = "Always collect payment before treatment. "
+characterIcon = ExtResource( 9 )
 levelFailText = "I ought to make you sample these potions yourself. Maybe that would teach you."
+levelFailIcon = ExtResource( 11 )
 levelOneStarText = "You remind me of my younger self. Please stop doing that. "
+levelOneStarIcon = ExtResource( 10 )
 levelTwoStarText = "You’re getting there alright. Where exactly that is, we shall see."
+levelTwoStarIcon = ExtResource( 12 )
 levelThreeStarText = "What’s your secret for being so good? Well, me of course. And you better not forget it."
+levelThreeStarIcon = ExtResource( 9 )
 collectGoal = [ {
 "amount": 4,
 "drop": ExtResource( 4 )

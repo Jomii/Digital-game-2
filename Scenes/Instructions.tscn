@@ -12,12 +12,12 @@ shadow_color = Color( 0, 0, 0, 0.305882 )
 shadow_size = 2
 shadow_offset = Vector2( 1, 1 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 size = 50
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=3]
 size = 28
 use_filter = true
 font_data = ExtResource( 4 )
@@ -59,7 +59,7 @@ margin_left = -239.156
 margin_top = 133.245
 margin_right = 205.844
 margin_bottom = 209.245
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.266667, 0.160784, 0, 1 )
 text = "INSTRUCTIONS"
 align = 1
@@ -73,13 +73,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -245.0
-margin_top = -329.5
-margin_right = 208.0
-margin_bottom = 316.5
-custom_fonts/font = SubResource( 5 )
+margin_left = -236.0
+margin_top = -354.5
+margin_right = 210.0
+margin_bottom = 332.5
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.266667, 0.160784, 0, 1 )
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor est nec mi iaculis, non suscipit augue aliquet. Phasellus tincidunt dapibus varius. Vestibulum at neque feugiat, molestie dolor eget, aliquet elit. Sed dolor nulla, auctor id mauris vitae, commodo lobortis purus. Etiam vel dui in sapien pulvinar tempus quis eget elit. Maecenas in porttitor nulla. Vivamus sodales et ipsum pharetra eleifend. Donec ut sapien lacus."
+text = "As the apprentice of the tribe’s Healer, you are tasked to learn the noble responsibilities involved in concocting cures for your peoples’ various needs and desires.
+
+At the beginning of each level, the top of your screen shows the herbs that are required to make a distinct potion. Try to gather the right ingredients as quickly as you can. Anything that is not listed in the recipe must be kept away from the potion and thus from your basket!
+
+As your skills increase, so do your challenges. Try to keep up and remember: always listen to what your Healer has to say!
+"
 autowrap = true
 clip_text = true
 __meta__ = {
