@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/LevelEnd.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Scroll.png" type="Texture" id=9]
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Sign 2.png" type="Texture" id=10]
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Blank button.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Surroundings/Sign1.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.235294 )
@@ -62,10 +63,12 @@ expand = true
 [node name="SurroundingStars" type="TextureRect" parent="Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -200.0
-margin_right = 200.0
-margin_bottom = 200.0
-texture = ExtResource( 10 )
+margin_left = -212.218
+margin_top = -13.0321
+margin_right = 187.782
+margin_bottom = 186.968
+rect_scale = Vector2( 1.05736, 1.05736 )
+texture = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
