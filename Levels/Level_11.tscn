@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=2]
@@ -8,16 +8,25 @@
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/Sprites/Materials/Bottles2.png" type="Texture" id=7]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenIlkeäAjatus.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaEpäilevä.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmäKii.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaVihainen.png" type="Texture" id=12]
 
 [node name="Level_11" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 7 )
 levelStartText = "Now, the potion of undeserved fortune... tempted to try some? I'd tell you how foolish that would be, but by know you ought to know already. "
 characterText = "How do you weaponize a cow? With am-moo-nution! "
+characterIcon = ExtResource( 11 )
 levelFailText = "Don’t worry, maybe next time you’ll do even worse and can feel good about yourself then."
+levelFailIcon = ExtResource( 12 )
 levelOneStarText = "Barely adequate. As I expected. "
+levelOneStarIcon = ExtResource( 10 )
 levelTwoStarText = "If it’s any consolation, you did not fail my expectations."
+levelTwoStarIcon = ExtResource( 10 )
 levelThreeStarText = "I’m so proud of myself for having trained you!"
+levelThreeStarIcon = ExtResource( 9 )
 collectGoal = [ {
 "amount": 4,
 "drop": ExtResource( 4 )
