@@ -1,0 +1,51 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenIlkeaAjatus.png" type="Texture" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSeriousPuhallus.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Bottles4.png" type="Texture" id=12]
+
+[node name="Level_14" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 12 )
+levelStartText = "The philter of benign imperfections is actually just a placebo. Still better than most of the regular stuff we use."
+characterText = "Know what a witch test is called? A hexam!"
+characterIcon = ExtResource( 10 )
+levelFailText = "Yet again disappointed, but most definitely not surprised. "
+levelFailIcon = ExtResource( 9 )
+levelOneStarText = "Be glad that I don’t pay you anything, because I’d be claiming every cent back now."
+levelOneStarIcon = ExtResource( 11 )
+levelTwoStarText = "“Good enough” is not a medical term."
+levelTwoStarIcon = ExtResource( 8 )
+levelThreeStarText = "What’s your secret for being so good? Well, me of course. And you better not forget it."
+levelThreeStarIcon = ExtResource( 10 )
+collectGoal = [ {
+"amount": 4,
+"drop": ExtResource( 4 )
+}, {
+"amount": 1,
+"drop": ExtResource( 6 )
+}, {
+"amount": 6,
+"drop": ExtResource( 7 )
+}, {
+"amount": 2,
+"drop": ExtResource( 5 )
+}, {
+"amount": 4,
+"drop": ExtResource( 3 )
+} ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 2 )
+volume_db = -20.194
+autoplay = true

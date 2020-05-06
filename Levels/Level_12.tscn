@@ -1,0 +1,52 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaAjatus.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaHikoileva.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaEpaileva.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Bottles1.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=12]
+
+[node name="Level_12" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 11 )
+levelStartText = "Did you know that the vial of open minds was invented by a washerwoman? No? Well then, you should definitely try drinking some.
+"
+characterText = "An apple a day will keep the doctor away, because he has stocks in the fruit company."
+characterIcon = ExtResource( 5 )
+levelFailText = "Disastrous. I have a feeling this is a recurring theme with you. "
+levelFailIcon = ExtResource( 8 )
+levelOneStarText = "I’d gladly let you treat my mother-in-law on her deathbed. It’s a wicked thing to say, but that’s just how bad you are."
+levelOneStarIcon = ExtResource( 10 )
+levelTwoStarText = "If it’s any consolation, you did not fail my expectations."
+levelTwoStarIcon = ExtResource( 5 )
+levelThreeStarText = "I’m so proud of myself for having trained you! Excellent work. "
+levelThreeStarIcon = ExtResource( 12 )
+collectGoal = [ {
+"amount": 2,
+"drop": ExtResource( 9 )
+}, {
+"amount": 3,
+"drop": ExtResource( 6 )
+}, {
+"amount": 5,
+"drop": ExtResource( 3 )
+}, {
+"amount": 2,
+"drop": ExtResource( 4 )
+}, {
+"amount": 7,
+"drop": ExtResource( 7 )
+} ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 2 )
+volume_db = -20.194
+autoplay = true
