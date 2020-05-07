@@ -157,7 +157,10 @@ func _on_Player_collect(drop):
 	
 	if isLevelComplete():
 		var score = calculateScore()
-		save_game(score)
+		
+		if score >= global.level.maxScore / 3:
+			save_game(score)
+			
 		emit_signal("levelComplete", score)
 		
 func calculateScore():
