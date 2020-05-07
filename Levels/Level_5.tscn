@@ -24,7 +24,7 @@ levelOneStarText = "Suppose I can't expect more from a newbie."
 levelOneStarIcon = ExtResource( 10 )
 levelTwoStarText = "“Good enough” is not a medical term. "
 levelTwoStarIcon = ExtResource( 9 )
-levelThreeStarText = "Congratulations! We might just make an alchemist out of you yet. "
+levelThreeStarText = "Congratulations! We just might be able to make an alchemist out of you. "
 levelThreeStarIcon = ExtResource( 9 )
 collectGoal = [ {
 "amount": 2,

@@ -26,7 +26,7 @@ levelOneStarText = "There’s a herb for everything, except for malpractice. "
 levelOneStarIcon = ExtResource( 11 )
 levelTwoStarText = "You have ways to go still, but at least you’re moving. "
 levelTwoStarIcon = ExtResource( 9 )
-levelThreeStarText = "Congratulations! We might just make an alchemist out of you yet."
+levelThreeStarText = "Congratulations! We just might be able to make an alchemist out of you."
 levelThreeStarIcon = ExtResource( 12 )
 collectGoal = [ {
 "amount": 1,

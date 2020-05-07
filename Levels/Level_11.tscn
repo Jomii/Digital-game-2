@@ -13,14 +13,11 @@
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=11]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaVihainen.png" type="Texture" id=12]
 
-
-
-
 [node name="Level_11" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 7 )
 levelStartText = "Now, the potion of undeserved fortune... tempted to try some? I'd tell you how foolish that would be, but by know you ought to know already. "
-characterText = "How do you weaponize a cow? With am-moo-nution! "
+characterText = "How do you weaponize a cow? With am-moo-nition! "
 characterIcon = ExtResource( 11 )
 levelFailText = "Don’t worry, maybe next time you’ll do even worse and can feel good about yourself then."
 levelFailIcon = ExtResource( 12 )
