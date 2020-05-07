@@ -29,13 +29,15 @@ func _ready():
 	
 func start_game():
 	randomize()
+	load_level()
 	$Player.start($StartPosition.position)
+	$UI/Time.text = "Get ready!"
 	
 	# Remove all drops
 	for i in $Drops.get_children():
 		i.queue_free()
-		
-	load_level()
+	
+	$StartTimer.start()	
 	
 func load_level():
 	level = global.level
@@ -180,4 +182,10 @@ func calculateScore():
 
 
 func _on_LevelEnd_restartLevel():
+	$SpawnTimer.stop()
 	start_game()
+
+
+func _on_StartTimer_timeout():
+	$SpawnTimer.start()
+	$UI/Time.text = ""
