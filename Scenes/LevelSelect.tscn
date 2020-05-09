@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Sign1.png" type="Texture" id=13]
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Puhekupla.png" type="Texture" id=14]
 [ext_resource path="res://Audio/Menuclick.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Art/Sprites/Materials/Surroundings/Button right.png" type="Texture" id=16]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 10 )
@@ -153,6 +154,7 @@ margin_top = 45.9523
 margin_right = 14.8049
 margin_bottom = 218.952
 theme = ExtResource( 8 )
+icon = ExtResource( 16 )
 
 [node name="LeftButton2" parent="." instance=ExtResource( 6 )]
 anchor_top = 0.5
@@ -162,6 +164,7 @@ margin_top = 175.966
 margin_right = 241.575
 margin_bottom = 339.966
 theme = ExtResource( 8 )
+icon = ExtResource( 16 )
 
 [node name="PlayButton" type="Button" parent="."]
 anchor_top = 1.0
