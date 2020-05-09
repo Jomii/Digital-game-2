@@ -11,7 +11,7 @@
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSeriousPuhallus.png" type="Texture" id=9]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=10]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=11]
-[ext_resource path="res://Art/Sprites/Materials/Bottles4.png" type="Texture" id=12]
+[ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle15.png" type="Texture" id=12]
 
 [node name="Level_14" type="Node"]
 script = ExtResource( 1 )

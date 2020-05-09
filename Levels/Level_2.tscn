@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
-[ext_resource path="res://Art/Sprites/Materials/Bottles1.png" type="Texture" id=2]
+[ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle1r.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=5]
@@ -11,7 +11,6 @@
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaVihainen.png" type="Texture" id=9]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIlonenAjatteleva.png" type="Texture" id=10]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=11]
-
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 1 )

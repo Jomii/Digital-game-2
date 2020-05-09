@@ -11,7 +11,6 @@
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSurullinen.png" type="Texture" id=9]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=10]
 
-
 [node name="Level_4" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 2 )

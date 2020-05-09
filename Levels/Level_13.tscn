@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
-[ext_resource path="res://Art/Sprites/Materials/Bottles3.png" type="Texture" id=3]
+[ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle11.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=6]
