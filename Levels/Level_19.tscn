@@ -17,16 +17,17 @@
 [node name="Level_19" type="Node"]
 script = ExtResource( 1 )
 levelStartIcon = ExtResource( 9 )
-levelStartText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pretium leo, eu egestas libero condimentum ac ligula. "
-characterText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pretium leo, eu egestas libero condimentum ac ligula. "
+levelStartText = "Do you know why they call this one Healer’s Thrill? Because making it is the exact opposite."
+characterText = "It’s basically euthanasia to poison a patient who refuses fair payment, because they were certainly asking for it.
+"
 characterIcon = ExtResource( 12 )
-levelFailText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pretium leo, eu egestas libero condimentum ac ligula. "
+levelFailText = "My Gods. Never in my days in medicine have I seen achievements such as yours. I pray I never will again."
 levelFailIcon = ExtResource( 11 )
-levelOneStarText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pretium leo, eu egestas libero condimentum ac ligula. "
+levelOneStarText = "Mark my words, you’ll be a legend one day, and not in the good way."
 levelOneStarIcon = ExtResource( 10 )
-levelTwoStarText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pretium leo, eu egestas libero condimentum ac ligula. "
+levelTwoStarText = "Congratulations! You are now a licensed Minor Healer for sub-, proto- and almost-human species. Barely."
 levelTwoStarIcon = ExtResource( 13 )
-levelThreeStarText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pretium leo, eu egestas libero condimentum ac ligula. "
+levelThreeStarText = "That could’ve gone so much, much worse that it can actually be called a good performance!"
 levelThreeStarIcon = ExtResource( 8 )
 collectGoal = [ {
 "amount": 10,
