@@ -4,10 +4,10 @@
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle11.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Drops/Herb8.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Drops/Herb12.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Drops/Herb9.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaNormaali.png" type="Texture" id=9]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaItkeva2.png" type="Texture" id=10]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=11]
@@ -28,7 +28,7 @@ levelTwoStarIcon = ExtResource( 9 )
 levelThreeStarText = "Now that’s what we call medicine! You’d get a medal, if only we had any."
 collectGoal = [ {
 "amount": 4,
-"drop": ExtResource( 8 )
+"drop": ExtResource( 5 )
 }, {
 "amount": 1,
 "drop": ExtResource( 6 )
@@ -40,7 +40,7 @@ collectGoal = [ {
 "drop": ExtResource( 4 )
 }, {
 "amount": 6,
-"drop": ExtResource( 5 )
+"drop": ExtResource( 8 )
 } ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

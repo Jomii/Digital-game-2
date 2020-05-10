@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle1r.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb10.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb8.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=7]

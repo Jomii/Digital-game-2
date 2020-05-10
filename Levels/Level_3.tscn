@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottle5.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb7.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=6]
@@ -37,7 +37,7 @@ collectGoal = [ {
 "amount": 1,
 "drop": ExtResource( 4 )
 }, {
-"amount": 1,
+"amount": 2,
 "drop": ExtResource( 7 )
 } ]
 

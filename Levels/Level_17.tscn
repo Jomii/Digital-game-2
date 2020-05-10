@@ -1,0 +1,53 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle17.png" type="Texture" id=3]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenIlkeaAjatus.png" type="Texture" id=4]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIlkeanIloinen.png" type="Texture" id=5]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaItkeva.png" type="Texture" id=6]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaAjatus.png" type="Texture" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Drops/Herb7.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Drops/Herb12.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Drops/Herb8.tscn" type="PackedScene" id=13]
+
+[node name="Level_17" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 3 )
+levelStartText = "Sadly, the tonic of rejuvenation does not cure hangover.
+"
+characterText = "What’d you call a vampire that doesn’t fly, drink blood, but lives in a coffin? The tax collector."
+characterIcon = ExtResource( 7 )
+levelFailText = "If it’s any consolation, you did not fail my expectations."
+levelFailIcon = ExtResource( 6 )
+levelOneStarText = "I ought to make you sample these potions yourself. Maybe that would teach you."
+levelOneStarIcon = ExtResource( 4 )
+levelTwoStarText = "You have ways to go still, but at least you’re moving."
+levelTwoStarIcon = ExtResource( 8 )
+levelThreeStarText = "What’s your secret for being so good? Well, me of course. And you better not forget it."
+levelThreeStarIcon = ExtResource( 5 )
+collectGoal = [ {
+"amount": 3,
+"drop": ExtResource( 12 )
+}, {
+"amount": 3,
+"drop": ExtResource( 11 )
+}, {
+"amount": 6,
+"drop": ExtResource( 13 )
+}, {
+"amount": 3,
+"drop": ExtResource( 9 )
+}, {
+"amount": 6,
+"drop": ExtResource( 10 )
+} ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 2 )
+volume_db = -20.194
+autoplay = true

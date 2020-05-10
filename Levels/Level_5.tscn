@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Bottles4.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb9.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Drops/Herb4.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Drops/Herb12.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Drops/Herb7.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen.png" type="Texture" id=9]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaTajuton.png" type="Texture" id=10]
@@ -31,10 +31,10 @@ collectGoal = [ {
 "drop": ExtResource( 4 )
 }, {
 "amount": 2,
-"drop": ExtResource( 6 )
+"drop": ExtResource( 7 )
 }, {
 "amount": 1,
-"drop": ExtResource( 7 )
+"drop": ExtResource( 6 )
 }, {
 "amount": 3,
 "drop": ExtResource( 5 )

@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Drops/Herb12.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb11.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=6]
 [ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle16.png" type="Texture" id=7]
@@ -33,7 +33,7 @@ collectGoal = [ {
 "drop": ExtResource( 4 )
 }, {
 "amount": 4,
-"drop": ExtResource( 5 )
+"drop": ExtResource( 1 )
 }, {
 "amount": 1,
 "drop": ExtResource( 3 )
@@ -42,7 +42,7 @@ collectGoal = [ {
 "drop": ExtResource( 2 )
 }, {
 "amount": 5,
-"drop": ExtResource( 1 )
+"drop": ExtResource( 5 )
 } ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

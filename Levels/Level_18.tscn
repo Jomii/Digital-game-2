@@ -1,0 +1,50 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen.png" type="Texture" id=3]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenAjattelevaHuolestunut.png" type="Texture" id=4]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaAjatus.png" type="Texture" id=5]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaItkeva2.png" type="Texture" id=6]
+[ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle19.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Drops/Herb2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Drops/Herb9.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Drops/Herb12.tscn" type="PackedScene" id=12]
+
+[node name="Level_18" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 7 )
+levelStartText = "Sometimes the names of potions are in jest. With the flask of untimely death, however... not so much. "
+characterText = "Who’s the elf everyone can love? Oneself."
+characterIcon = ExtResource( 5 )
+levelFailText = "Disastrous. I have a feeling this is a recurring theme with you."
+levelFailIcon = ExtResource( 6 )
+levelOneStarText = "You remind me of my younger self. Please stop doing that."
+levelTwoStarText = "You’re getting there alright. Where exactly that is, we shall see."
+levelTwoStarIcon = ExtResource( 4 )
+levelThreeStarText = "Congratulations. We might just make an alchemist out of you yet."
+levelThreeStarIcon = ExtResource( 3 )
+collectGoal = [ {
+"amount": 3,
+"drop": ExtResource( 10 )
+}, {
+"amount": 5,
+"drop": ExtResource( 11 )
+}, {
+"amount": 6,
+"drop": ExtResource( 12 )
+}, {
+"amount": 3,
+"drop": ExtResource( 9 )
+}, {
+"amount": 5,
+"drop": ExtResource( 8 )
+} ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 2 )
+volume_db = -20.194
+autoplay = true

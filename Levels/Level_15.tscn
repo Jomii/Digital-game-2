@@ -1,0 +1,52 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/Drops/Herb1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drops/Herb7.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Drops/Herb11.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Drops/Herb3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Drops/Herb6.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaAjatus.png" type="Texture" id=8]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaItkeva2.png" type="Texture" id=9]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen.png" type="Texture" id=10]
+[ext_resource path="res://Art/Sprites/Materials/Bottles/Bottle7.png" type="Texture" id=11]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaHikoilevaPuuskivaNolo.png" type="Texture" id=12]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinenIlkeaAjatus.png" type="Texture" id=13]
+
+[node name="Level_15" type="Node"]
+script = ExtResource( 1 )
+levelStartIcon = ExtResource( 11 )
+levelStartText = "Curiously, the draught of premonition can cause severe forgetfulness if prepared wrong."
+characterText = "What kind of spell is called “incantachion”? A misspell. "
+characterIcon = ExtResource( 10 )
+levelFailText = "Failing this badly is almost a talent on its own. "
+levelFailIcon = ExtResource( 12 )
+levelOneStarText = "Be glad that I don’t pay you anything, because I’d be claiming every cent back now. "
+levelOneStarIcon = ExtResource( 13 )
+levelTwoStarText = "You have ways to go still, but at least you’re moving."
+levelTwoStarIcon = ExtResource( 9 )
+levelThreeStarText = "Do you know what I say to you and my favourite stake both? Well done!"
+levelThreeStarIcon = ExtResource( 8 )
+collectGoal = [ {
+"amount": 4,
+"drop": ExtResource( 3 )
+}, {
+"amount": 3,
+"drop": ExtResource( 4 )
+}, {
+"amount": 6,
+"drop": ExtResource( 5 )
+}, {
+"amount": 6,
+"drop": ExtResource( 7 )
+}, {
+"amount": 2,
+"drop": ExtResource( 6 )
+} ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 2 )
+volume_db = -20.194
+autoplay = true
