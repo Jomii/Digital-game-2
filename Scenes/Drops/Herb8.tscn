@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.9296
 
-[node name="Drop" type="RigidBody2D"]
+[node name="Herb8" type="RigidBody2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
