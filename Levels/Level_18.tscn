@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Drops/Herb9.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Drops/Herb5.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Drops/Herb12.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=13]
 
 [node name="Level_18" type="Node"]
 script = ExtResource( 1 )
@@ -22,6 +23,7 @@ characterIcon = ExtResource( 5 )
 levelFailText = "Disastrous. I have a feeling this is a recurring theme with you."
 levelFailIcon = ExtResource( 6 )
 levelOneStarText = "You remind me of my younger self. Please stop doing that."
+levelOneStarIcon = ExtResource( 13 )
 levelTwoStarText = "You’re getting there alright. Where exactly that is, we shall see."
 levelTwoStarIcon = ExtResource( 4 )
 levelThreeStarText = "Congratulations. We might just make an alchemist out of you yet."
