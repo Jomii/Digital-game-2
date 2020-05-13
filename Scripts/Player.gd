@@ -60,3 +60,8 @@ func _on_Player_body_entered(body):
 	var drop = {"name": dropName[0], "isBad": body.isBad}
 	emit_signal("collect", drop)
 	body.queue_free()
+
+
+func _on_Main_levelLoaded(_characterText):
+	right_action_pressed = false
+	left_action_pressed = false

@@ -293,6 +293,7 @@ volume_db = -20.0
 [connection signal="dropCollected" from="." to="UI" method="_on_Main_dropCollected"]
 [connection signal="levelComplete" from="." to="UI/LevelEnd" method="_on_Main_levelComplete"]
 [connection signal="levelLoaded" from="." to="UI" method="_on_Main_levelLoaded"]
+[connection signal="levelLoaded" from="." to="Player" method="_on_Main_levelLoaded"]
 [connection signal="collect" from="Player" to="." method="_on_Player_collect"]
 [connection signal="button_down" from="UI/RightButton" to="Player" method="_on_RightButton_button_down"]
 [connection signal="button_up" from="UI/RightButton" to="Player" method="_on_RightButton_button_up"]
