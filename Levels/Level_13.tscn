@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Audio/PotionBeat.ogg" type="AudioStream" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaItkeva2.png" type="Texture" id=10]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaSIlmaKii.png" type="Texture" id=11]
 [ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaYouSerious.png" type="Texture" id=12]
+[ext_resource path="res://Art/Sprites/Materials/Faces/KasvokuvaIloinen.png" type="Texture" id=13]
 
 [node name="Level_13" type="Node"]
 script = ExtResource( 1 )
@@ -26,6 +27,7 @@ levelOneStarIcon = ExtResource( 12 )
 levelTwoStarText = "I’ve seen worse, I’ve seen better, but never both at once like that. Impressive."
 levelTwoStarIcon = ExtResource( 9 )
 levelThreeStarText = "Now that’s what we call medicine! You’d get a medal, if only we had any."
+levelThreeStarIcon = ExtResource( 13 )
 collectGoal = [ {
 "amount": 4,
 "drop": ExtResource( 5 )
