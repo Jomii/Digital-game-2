@@ -17,15 +17,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 14 ), ExtResource( 3 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "Wiggle",
 "speed": 35.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
 } ]
 
 [node name="Player" type="Area2D"]
@@ -40,7 +40,7 @@ polygon = PoolVector2Array( -8, -2.05279, 0, 5.94721, 16, 5.94721, 24, -2.05279,
 position = Vector2( -0.568613, 7.29424 )
 scale = Vector2( 0.169099, 0.207554 )
 frames = SubResource( 1 )
-animation = "Wiggle"
+animation = "Idle"
 playing = true
 
 [node name="PlayerNode" type="Node2D" parent="."]

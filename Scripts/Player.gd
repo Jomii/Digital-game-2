@@ -17,14 +17,18 @@ func start(pos):
 
 func _process(delta):
 	var velocity = Vector2()
+	var animation = "Idle"
 	
 	if Input.is_action_pressed("ui_right") || right_action_pressed:
 		velocity.x += 1
+		animation = "Wiggle"
 	if Input.is_action_pressed("ui_left") || left_action_pressed:
 		velocity.x -= 1
+		animation = "Wiggle"
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		
+	$Sprite.animation = animation
 	position += velocity * delta
 	var offset = 26
 	# Restrict the position to be inside the screen
