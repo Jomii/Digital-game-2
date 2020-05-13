@@ -22,7 +22,8 @@ _global_script_class_icons={
 
 config/name="Digital game 2"
 run/main_scene="res://Scenes/MainMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://Art/Sprites/Materials/Animation/Icon.png"
+config/windows_native_icon="res://Art/Sprites/Materials/Animation/icon_X9i_icon.ico"
 
 [autoload]
 
