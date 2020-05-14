@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DoctorsOrders.ogg-d93827c599a2f1bb90a30feb87f4add9.oggstr"
+
+[deps]
+
+source_file="res://Audio/DoctorsOrders.ogg"
+dest_files=[ "res://.import/DoctorsOrders.ogg-d93827c599a2f1bb90a30feb87f4add9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=7.38

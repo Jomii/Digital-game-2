@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Sign 3.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Fonts/roboto_64_dynamicfont.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Audio/Menuclick.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Art/Sprites/Materials/Surroundings/Kansikuva.png" type="Texture" id=12]
+[ext_resource path="res://Audio/AlchemyJam.ogg" type="AudioStream" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 44
@@ -179,6 +180,11 @@ visible = false
 pause_mode = 2
 stream = ExtResource( 11 )
 volume_db = -20.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -20.194
+autoplay = true
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="InstructionsButton" to="." method="_on_InstructionsButton_pressed"]
