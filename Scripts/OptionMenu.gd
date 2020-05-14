@@ -14,3 +14,8 @@ func _on_BackButton_pressed():
 func _on_Volume_value_changed(value):
 	$Panel/Volume.value = value
 	AudioServer.set_bus_volume_db(masterIndex, value)
+	
+	if value == $Panel/Volume.min_value:
+		AudioServer.set_bus_mute(masterIndex, true)
+	else:
+		AudioServer.set_bus_mute(masterIndex, false)
