@@ -8,6 +8,9 @@ The master will guide you through the increasingly difficult levels with black s
 The game becomes the harder the more advanced in medical alchemy you become, the ingredients falling more numerous and swiftly along with the harmful objects to be avoided. 
 Being a healer is a responsible position in the community, so it goes without saying that training to become one will be merciless and unforgiving.
 
+Game published and available for download at Tampere University Game Research Lab website:
+[Link](https://gameresearchlab.tuni.fi/education/student-work/c-o-v-i-d/)
+
 ## Credits:
 
 Game created and developed by Team Anoroc:
